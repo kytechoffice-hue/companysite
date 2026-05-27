@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | KY Tech Services Pvt Ltd</title>
+    <meta name="description" content="We provide Website Development, Digital Marketing, Windows App Development, Content Writing, Blog Writing, and complete IT solutions to help your business grow online.">
+    <meta name="keywords" content="IT services, Web development, digital marketing, app development, content writing, SEO, tech solutions">
+    <meta name="author" content="KY Tech Services Pvt Ltd">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="KY Tech Services | Transforming Ideas Into Digital Solutions">
+    <meta property="og:description" content="We provide custom web development, app creation, content writing, and digital marketing to scale your brand.">
+    <meta property="og:image" content="assets/og-image.jpg">
+    <meta property="og:url" content="https://kytechservices.com">
+    <meta property="og:type" content="website">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body data-theme="light">
+
+    <!-- Header Navbar -->
+    <header class="header" id="main-header">
+        <div class="container navbar">
+            <a href="/" class="logo-link" id="logo-anchor">
+                <img src="logo-icon.png" alt="KY Tech Logo" class="logo-img-icon" style="height: 45px; width: auto; object-fit: contain; transition: transform var(--transition-normal);">
+                <div class="logo-text">
+                    <span style="font-family: var(--font-heading); font-weight: 800; font-size: 1.3rem; letter-spacing: 0.05em; color: var(--text-primary);">KY TECH SERVICES</span>
+                    <span style="display: block; font-size: 0.55rem; font-weight: 700; letter-spacing: 0.28em; color: var(--text-light); text-transform: uppercase;">Innovate • Secure • Deliver</span>
+                </div>
+            </a>
+
+            <!-- Menu items -->
+            <nav class="nav-menu" id="nav-links">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/about" class="nav-link">About Us</a>
+                <a href="/services" class="nav-link">Services</a>
+                <a href="/products" class="nav-link">Products</a>
+                <a href="/contact" class="nav-link active">Contact Us</a>
+            </nav>
+
+            <!-- Actions (Theme Toggle & CTA) -->
+            <div class="nav-actions">
+                <div class="theme-toggle" id="theme-btn" title="Toggle Theme" aria-label="Toggle Theme">
+                    <svg class="theme-toggle-icon sun-icon" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="4" />
+                        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+                    </svg>
+                    <svg class="theme-toggle-icon moon-icon" viewBox="0 0 24 24">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </div>
+                <button class="btn btn-primary btn-cta" id="cta-quote-btn">
+                    Get a Quote <i data-lucide="arrow-up-right" class="btn-icon"></i>
+                </button>
+                <div class="burger-menu" id="menu-toggle" aria-label="Toggle Menu">
+                    <div class="burger-line"></div>
+                    <div class="burger-line"></div>
+                    <div class="burger-line"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Us Section -->
+    <section class="contact" id="contact" style="padding-top: 8rem; min-height: 80vh;">
+        <div class="container contact-grid">
+            <div class="contact-info-panel">
+                <div>
+                    <div class="section-tag">
+                        <span class="dot"></span> Get In Touch
+                    </div>
+                    <h2 class="section-title">Let's Build Something <span>Great</span></h2>
+                    <p class="section-desc" style="margin-bottom: 0;">Have a project idea or need technical audit services? Drop us a line. Our engineers and marketers will respond within 24 hours.</p>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon-box">
+                        <i data-lucide="phone"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Phone Support</h3>
+                        <p>+91 91378 22376 (Mon-Fri, 9am - 6pm)</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon-box">
+                        <i data-lucide="mail"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Email Queries</h3>
+                        <p>help@kytechserv.com</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Contact Form Card -->
+            <div class="contact-form glass-card">
+                <!-- Alert box for success messages -->
+                <div class="form-alert form-alert-success" id="contact-success-alert">
+                    <i data-lucide="check-circle"></i>
+                    <span>Thank you! Your message has been sent successfully.</span>
+                </div>
+                
+                <form id="contact-form-element">
+                    <div class="form-group-row">
+                        <div class="form-group">
+                            <label for="form-name" class="form-label">Full Name</label>
+                            <input type="text" id="form-name" class="form-control" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-email" class="form-label">Email Address</label>
+                            <input type="email" id="form-email" class="form-control" placeholder="john@example.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="form-subject" class="form-label">Subject</label>
+                        <select id="form-subject" class="form-control" required style="appearance: none; -webkit-appearance: none;">
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="web">Website Development</option>
+                            <option value="app">Windows App Development</option>
+                            <option value="marketing">Digital Marketing / SEO</option>
+                            <option value="content">Content &amp; Blog Writing</option>
+                            <option value="other">General Inquiry</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="form-message" class="form-label">Message Details</label>
+                        <textarea id="form-message" class="form-control" placeholder="Describe your project, budget, and requirements..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary form-submit-btn" id="contact-submit-btn">
+                        Send Message <i data-lucide="send" class="btn-icon"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="#home" class="logo-link">
+                    <img src="logo-icon.png" alt="KY Tech Logo" class="logo-img-icon" style="height: 35px; width: auto; object-fit: contain;">
+                    <span style="font-family: var(--font-heading); font-weight: 800; font-size: 1.15rem; color: var(--text-primary);">KY TECH</span>
+                </a>
+                <p class="footer-desc">We deliver custom enterprise software development, digital search optimization, and web layouts that push businesses forward.</p>
+                <div class="footer-socials">
+                    <a href="#home" class="btn-circle" aria-label="Twitter"><i data-lucide="twitter" style="width: 18px; height: 18px;"></i></a>
+                    <a href="#home" class="btn-circle" aria-label="LinkedIn"><i data-lucide="linkedin" style="width: 18px; height: 18px;"></i></a>
+                    <a href="#home" class="btn-circle" aria-label="GitHub"><i data-lucide="github" style="width: 18px; height: 18px;"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <div class="footer-links">
+                    <a href="/">Home</a>
+                    <a href="/about">About Us</a>
+                    <a href="/services">Services</a>
+                    <a href="/products">Products</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <div class="footer-links">
+                    <a href="#services">Web Development</a>
+                    <a href="#services">Digital Marketing</a>
+                    <a href="#services">Windows Apps</a>
+                    <a href="#services">Content Writing</a>
+                    <a href="#services">IT Solutions</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p class="footer-desc" style="margin-bottom: 0.75rem;">Subscribe to receive tech updates, marketing insights, and guides directly in your inbox.</p>
+                <form class="newsletter-form" id="newsletter-form-element">
+                    <input type="email" class="newsletter-input" placeholder="Your Email Address" required aria-label="Newsletter Email">
+                    <button type="submit" class="newsletter-btn" aria-label="Subscribe">
+                        <i data-lucide="mail" style="width: 16px; height: 16px;"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 KY Tech Services Pvt Ltd. All Rights Reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#" id="privacy-link">Privacy Policy</a>
+                <a href="#" id="terms-link">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Get a Quote Modal -->
+    <div class="modal-overlay" id="quote-modal-overlay">
+        <div class="modal-content glass-card">
+            <button class="modal-close-btn" id="modal-close-icon" aria-label="Close Modal">&times;</button>
+            <div class="modal-header">
+                <h2>Get a Custom Quote</h2>
+                <p>Provide details about your project and we'll schedule a discovery call.</p>
+            </div>
+            
+            <div class="form-alert form-alert-success" id="modal-success-alert">
+                <i data-lucide="check-circle"></i>
+                <span>Thank you! Your quote request has been received.</span>
+            </div>
+
+            <form id="modal-quote-form">
+                <div class="form-group">
+                    <label for="modal-name" class="form-label">Your Name</label>
+                    <input type="text" id="modal-name" class="form-control" placeholder="Jane Smith" required>
+                </div>
+                <div class="form-group">
+                    <label for="modal-email" class="form-label">Email Address</label>
+                    <input type="email" id="modal-email" class="form-control" placeholder="jane@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="modal-budget" class="form-label">Estimated Budget</label>
+                    <select id="modal-budget" class="form-control" required style="appearance: none; -webkit-appearance: none;">
+                        <option value="" disabled selected>Select budget range</option>
+                        <option value="under-50k">Under ₹50,000</option>
+                        <option value="50k-200k">₹50,000 - ₹2,00,000</option>
+                        <option value="200k-500k">₹2,00,000 - ₹5,00,000</option>
+                        <option value="500k-plus">₹5,00,000+</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="modal-desc" class="form-label">Brief Project Summary</label>
+                    <textarea id="modal-desc" class="form-control" placeholder="Share what you'd like to achieve..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary form-submit-btn">
+                    Request Quote <i data-lucide="arrow-right" class="btn-icon"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Notification Modal -->
+    <div class="modal-overlay" id="success-modal-overlay">
+        <div class="modal-content glass-card" style="max-width: 420px; text-align: center; padding: 2.5rem 2rem;">
+            <button class="modal-close-btn" id="success-modal-close-icon" aria-label="Close Modal">&times;</button>
+            <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(16, 185, 129, 0.15); color: #10b981; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; margin: 0 auto 1.25rem; border: 1px solid rgba(16, 185, 129, 0.3); box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);">
+                <i data-lucide="check-circle" style="width: 32px; height: 32px;"></i>
+            </div>
+            <h2 style="font-size: 1.6rem; font-weight: 800; margin-bottom: 0.5rem; font-family: var(--font-heading); color: var(--text-primary);">Email Sent Successfully!</h2>
+            <p style="font-size: 0.925rem; color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.5;">Thank you for contacting us. Your message has been sent successfully. Our team will get back to you within 24 hours.</p>
+            <button class="btn btn-primary" id="success-modal-btn" style="width: 100%;">Got it</button>
+        </div>
+    </div>
+
+    <!-- Privacy Policy Modal -->
+    <div class="modal-overlay" id="privacy-modal-overlay">
+        <div class="modal-content glass-card" style="max-width: 720px; max-height: 80vh; display: flex; flex-direction: column; text-align: left;">
+            <button class="modal-close-btn" id="privacy-modal-close-icon" aria-label="Close Modal">&times;</button>
+            <div class="modal-header" style="margin-bottom: 1.5rem; flex-shrink: 0; text-align: left;">
+                <h2 style="font-family: var(--font-heading); font-weight: 800; font-size: 1.8rem; color: var(--text-primary);">Privacy Policy</h2>
+                <p style="color: var(--text-light); font-size: 0.9rem;">KY Tech Services Pvt Ltd | Effective: May 2026</p>
+            </div>
+            <div class="privacy-modal-body" style="overflow-y: auto; padding-right: 0.5rem; color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;">
+                <p style="margin-bottom: 1rem;">At KY Tech Services Pvt Ltd, we value your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website or use our services.</p>
+                
+                <h3 style="color: var(--text-primary); font-size: 1.15rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.5rem;">1. Information We Collect</h3>
+                <p style="margin-bottom: 0.75rem;">We may collect the following types of information:</p>
+                <ul style="padding-left: 1.25rem; margin-bottom: 1rem; list-style-type: disc;">
+                    <li style="margin-bottom: 0.25rem;">Name and contact details (email address, phone number, company name)</li>
+                    <li style="margin-bottom: 0.25rem;">Information submitted through contact forms</li>
+                    <li style="margin-bottom: 0.25rem;">Project requirements and business details</li>
+                    <li style="margin-bottom: 0.25rem;">Website usage data such as IP address, browser type, and device information</li>
+                    <li style="margin-bottom: 0.25rem;">Cookies and analytics data</li>
+                </ul>
+
+                <h3 style="color: var(--text-primary); font-size: 1.15rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.5rem;">2. How We Use Your Information</h3>
+                <p style="margin-bottom: 0.75rem;">We use the collected information to:</p>
+                <ul style="padding-left: 1.25rem; margin-bottom: 1rem; list-style-type: disc;">
+                    <li style="margin-bottom: 0.25rem;">Provide and improve our IT services</li>
+                    <li style="margin-bottom: 0.25rem;">Respond to inquiries and customer support requests</li>
+                    <li style="margin-bottom: 0.25rem;">Develop websites, applications, and digital solutions</li>
+                    <li style="margin-bottom: 0.25rem;">Send updates, quotations, and service-related information</li>
+                    <li style="margin-bottom: 0.25rem;">Improve website performance and user experience</li>
+                    <li style="margin-bottom: 0.25rem;">Maintain security and prevent unauthorized access</li>
+                </ul>
+
+                <h3 style="color: var(--text-primary); font-size: 1.15rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.5rem;">3. Cookies Policy</h3>
+                <p style="margin-bottom: 1rem;">Our website may use cookies to enhance user experience and analyze website traffic. Users can choose to disable cookies through their browser settings.</p>
+
+                <h3 style="color: var(--text-primary); font-size: 1.15rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.5rem;">4. Data Protection</h3>
+                <p style="margin-bottom: 1rem;">We implement appropriate security measures to protect your personal information from unauthorized access, misuse, disclosure, or alteration.</p>
+
+                <h3 style="color: var(--text-primary); font-size: 1.15rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.5rem;">5. Third-Party Services</h3>
+                <p style="margin-bottom: 0.75rem;">We may use trusted third-party services such as:</p>
+                <ul style="padding-left: 1.25rem; margin-bottom: 1rem; list-style-type: disc;">
+                    <li style="margin-bottom: 0.25rem;">Website hosting providers</li>
+                    <li style="margin-bottom: 0.25rem;">Analytics tools</li>
+                    <li style="margin-bottom: 0.25rem;">Payment gateways</li>
+                    <li style="margin-bottom: 0.25rem;">Email communication platforms</li>
+                </ul>
+                <p style="margin-bottom: 1rem;">These providers may access limited information only for service-related purposes.</p>
+
+                <h3 style="color: var(--text-primary); font-size: 1.15rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.5rem;">6. Information Sharing</h3>
+                <p style="margin-bottom: 1rem;">KY Tech Services Pvt Ltd does not sell, rent, or trade users’ personal information to third parties. Information may only be shared when required by law or for business operations with trusted partners.</p>
+
+                <h3 style="color: var(--text-primary); font-size: 1.15rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.5rem;">7. User Rights</h3>
+                <p style="margin-bottom: 0.75rem;">Users may request to:</p>
+                <ul style="padding-left: 1.25rem; margin-bottom: 1rem; list-style-type: disc;">
+                    <li style="margin-bottom: 0.25rem;">Access their personal data</li>
+                    <li style="margin-bottom: 0.25rem;">Correct inaccurate information</li>
+                    <li style="margin-bottom: 0.25rem;">Delete their information</li>
+                    <li style="margin-bottom: 0.25rem;">Withdraw consent for communications</li>
+                </ul>
+                <p style="margin-bottom: 1rem;">Requests can be made through our official contact details.</p>
+
+                <h3 style="color: var(--text-primary); font-size: 1.15rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.5rem;">8. External Links</h3>
+                <p style="margin-bottom: 1rem;">Our website may contain links to external websites. We are not responsible for the privacy practices or content of third-party websites.</p>
+
+                <h3 style="color: var(--text-primary); font-size: 1.15rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.5rem;">9. Updates to This Policy</h3>
+                <p style="margin-bottom: 1rem;">We may update this Privacy Policy from time to time. Updated versions will be posted on this page with the revised effective date.</p>
+
+                <h3 style="color: var(--text-primary); font-size: 1.15rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.5rem;">10. Contact Us</h3>
+                <p style="margin-bottom: 0.5rem;">If you have any questions regarding this Privacy Policy, please contact:</p>
+                <address style="font-style: normal; margin-left: 0.5rem; line-height: 1.7; border-left: 3px solid var(--primary); padding-left: 0.75rem; margin-bottom: 1rem;">
+                    <strong>KY Tech Services Pvt Ltd</strong><br>
+                    Email: <a href="mailto:help@kytechserv.com" style="color: var(--primary); text-decoration: none;">help@kytechserv.com</a><br>
+                    Website: <a href="https://kytechserv.com" target="_blank" rel="noopener" style="color: var(--primary); text-decoration: none;">kytechserv.com</a>
+                </address>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms of Service Modal -->
+    <div class="modal-overlay" id="terms-modal-overlay">
+        <div class="modal-content glass-card" style="max-width: 720px; max-height: 80vh; display: flex; flex-direction: column; text-align: left;">
+            <button class="modal-close-btn" id="terms-modal-close-icon" aria-label="Close Modal">&times;</button>
+            <div class="modal-header" style="margin-bottom: 1.5rem; flex-shrink: 0; text-align: left;">
+                <h2 style="font-family: var(--font-heading); font-weight: 800; font-size: 1.8rem; color: var(--text-primary);">Terms of Service</h2>
+                <p style="color: var(--text-light); font-size: 0.9rem;">KY Tech Services Pvt Ltd | Effective: May 2026</p>
+            </div>
+            <div class="privacy-modal-body" style="overflow-y: auto; padding-right: 0.5rem; color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;">
+                <p style="margin-bottom: 1rem;">Welcome to KY Tech Services Pvt Ltd. By accessing our website or using our services, you agree to comply with the following Terms of Service. Please read them carefully before using our services.</p>
+                
+                <h3 style="color: var(--text-primary); font-size: 1.15rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.5rem;">1. Acceptance of Terms</h3>
+                <p style="margin-bottom: 0.75rem;">By accessing or using any service provided by KY Tech Services Pvt Ltd, you agree to be legally bound by these Terms of Service, our Privacy Policy, and any additional service agreements.</p>
+                <p style="margin-bottom: 1rem;">If you do not agree with these terms, you must discontinue use of our services immediately.</p>
+
+                <h3 style="color: var(--text-primary); font-size: 1.15rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.5rem;">2. Services Provided</h3>
+                <p style="margin-bottom: 0.75rem;">We provide IT-related services including but not limited to:</p>
+                <ul style="padding-left: 1.25rem; margin-bottom: 1rem; list-style-type: disc;">
+                    <li style="margin-bottom: 0.25rem;">Website Development</li>
+                    <li style="margin-bottom: 0.25rem;">Web Application Development</li>
+                    <li style="margin-bottom: 0.25rem;">Windows Application Development</li>
+                    <li style="margin-bottom: 0.25rem;">Digital Marketing</li>
+                    <li style="margin-bottom: 0.25rem;">Content Writing</li>
+                    <li style="margin-bottom: 0.25rem;">Blog Writing</li>
+                    <li style="margin-bottom: 0.25rem;">Technical Support and IT Solutions</li>
+                </ul>
+                <p style="margin-bottom: 1rem;">All services are subject to project scope, timelines, and payment agreements.</p>
+
+                <h3 style="color: var(--text-primary); font-size: 1.15rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.5rem;">3. Payment Terms</h3>
+                <ul style="padding-left: 1.25rem; margin-bottom: 1rem; list-style-type: disc;">
+                    <li style="margin-bottom: 0.25rem;">All payments must be made according to the agreed quotation or invoice.</li>
+                    <li style="margin-bottom: 0.25rem;">Advance payments are non-refundable unless otherwise stated in writing.</li>
+                    <li style="margin-bottom: 0.25rem;">Delayed payments may result in service suspension or project termination.</li>
+                    <li style="margin-bottom: 0.25rem;">Additional work outside the approved scope will incur extra charges.</li>
+                    <li style="margin-bottom: 0.25rem;">Final project files, source code, or credentials will only be delivered after full payment clearance.</li>
+                </ul>
+
+                <h3 style="color: var(--text-primary); font-size: 1.15rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.5rem;">4. Client Responsibilities</h3>
+                <p style="margin-bottom: 0.75rem;">Clients are responsible for:</p>
+                <ul style="padding-left: 1.25rem; margin-bottom: 1rem; list-style-type: disc;">
+                    <li style="margin-bottom: 0.25rem;">Providing accurate project requirements and content</li>
+                    <li style="margin-bottom: 0.25rem;">Delivering necessary approvals on time</li>
+                    <li style="margin-bottom: 0.25rem;">Ensuring that submitted content does not violate laws or copyrights</li>
+                    <li style="margin-bottom: 0.25rem;">Maintaining confidentiality of login credentials provided to them</li>
+                </ul>
+                <p style="margin-bottom: 1rem;">Project delays caused by the client may affect delivery timelines.</p>
+
+                <h3 style="color: var(--text-primary); font-size: 1.15rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.5rem;">5. Intellectual Property Rights</h3>
+                <ul style="padding-left: 1.25rem; margin-bottom: 1rem; list-style-type: disc;">
+                    <li style="margin-bottom: 0.25rem;">All intellectual property developed by KY Tech Services Pvt Ltd remains company property until full payment is received.</li>
+                    <li style="margin-bottom: 0.25rem;">Unauthorized copying, resale, modification, or redistribution of our work is strictly prohibited.</li>
+                    <li style="margin-bottom: 0.25rem;">We reserve the right to display completed projects in our portfolio unless restricted by written agreement.</li>
+                </ul>
+
+                <h3 style="color: var(--text-primary); font-size: 1.15rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.5rem;">6. Prohibited Activities</h3>
+                <p style="margin-bottom: 0.75rem;">Users and clients must not:</p>
+                <ul style="padding-left: 1.25rem; margin-bottom: 1rem; list-style-type: disc;">
+                    <li style="margin-bottom: 0.25rem;">Use our services for illegal, fraudulent, or harmful activities</li>
+                    <li style="margin-bottom: 0.25rem;">Attempt unauthorized access to servers, systems, or databases</li>
+                    <li style="margin-bottom: 0.25rem;">Upload malicious software, viruses, or harmful code</li>
+                    <li style="margin-bottom: 0.25rem;">Misuse website functionality or interfere with service operations</li>
+                    <li style="margin-bottom: 0.25rem;">Copy or reproduce website content without permission</li>
+                </ul>
+                <p style="margin-bottom: 1rem;">Violation of these terms may result in immediate termination of services and legal action.</p>
+
+                <h3 style="color: var(--text-primary); font-size: 1.15rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.5rem;">7. Service Suspension and Termination</h3>
+                <p style="margin-bottom: 0.75rem;">KY Tech Services Pvt Ltd reserves the right to suspend or terminate services without prior notice if:</p>
+                <ul style="padding-left: 1.25rem; margin-bottom: 1rem; list-style-type: disc;">
+                    <li style="margin-bottom: 0.25rem;">Payment obligations are not fulfilled</li>
+                    <li style="margin-bottom: 0.25rem;">Terms are violated</li>
+                    <li style="margin-bottom: 0.25rem;">Fraudulent or abusive activity is detected</li>
+                    <li style="margin-bottom: 0.25rem;">Client communication becomes threatening, abusive, or unlawful</li>
+                </ul>
+                <p style="margin-bottom: 1rem;">No refunds will be provided in such cases.</p>
+
+                <h3 style="color: var(--text-primary); font-size: 1.15rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.5rem;">8. Limitation of Liability</h3>
+                <ul style="padding-left: 1.25rem; margin-bottom: 1rem; list-style-type: disc;">
+                    <li style="margin-bottom: 0.25rem;">We are not liable for indirect, incidental, or consequential damages arising from service usage.</li>
+                    <li style="margin-bottom: 0.25rem;">We do not guarantee uninterrupted or error-free operation of websites, applications, or servers.</li>
+                    <li style="margin-bottom: 0.25rem;">Clients are responsible for maintaining backups of their own data unless backup services are specifically included.</li>
+                </ul>
+
+                <h3 style="color: var(--text-primary); font-size: 1.15rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.5rem;">9. Third-Party Services</h3>
+                <p style="margin-bottom: 1rem;">We may use third-party tools, hosting providers, APIs, or software services. We are not responsible for failures, downtime, or policy changes caused by third-party providers.</p>
+
+                <h3 style="color: var(--text-primary); font-size: 1.15rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.5rem;">10. Confidentiality</h3>
+                <p style="margin-bottom: 1rem;">Both parties agree to maintain confidentiality regarding sensitive business information, project data, and proprietary materials shared during the project.</p>
+
+                <h3 style="color: var(--text-primary); font-size: 1.15rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.5rem;">11. Revisions and Support</h3>
+                <ul style="padding-left: 1.25rem; margin-bottom: 1rem; list-style-type: disc;">
+                    <li style="margin-bottom: 0.25rem;">Revision limits will be based on the selected service package or agreement.</li>
+                    <li style="margin-bottom: 0.25rem;">Free support periods, if offered, are limited and subject to service scope.</li>
+                    <li style="margin-bottom: 0.25rem;">Future modifications or maintenance may require separate charges.</li>
+                </ul>
+
+                <h3 style="color: var(--text-primary); font-size: 1.15rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.5rem;">12. Governing Law</h3>
+                <p style="margin-bottom: 1rem;">These Terms of Service shall be governed by and interpreted under the laws of India. Any disputes shall be subject to the jurisdiction of the appropriate courts.</p>
+
+                <h3 style="color: var(--text-primary); font-size: 1.15rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.5rem;">13. Changes to Terms</h3>
+                <p style="margin-bottom: 1rem;">KY Tech Services Pvt Ltd reserves the right to update or modify these Terms of Service at any time without prior notice. Continued use of our services after updates constitutes acceptance of the revised terms.</p>
+
+                <h3 style="color: var(--text-primary); font-size: 1.15rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.5rem;">14. Contact Information</h3>
+                <p style="margin-bottom: 0.5rem;">For questions regarding these Terms of Service, contact:</p>
+                <address style="font-style: normal; margin-left: 0.5rem; line-height: 1.7; border-left: 3px solid var(--primary); padding-left: 0.75rem; margin-bottom: 1rem;">
+                    <strong>KY Tech Services Pvt Ltd</strong><br>
+                    Email: <a href="mailto:help@kytechserv.com" style="color: var(--primary); text-decoration: none;">help@kytechserv.com</a><br>
+                    Website: <a href="https://kytechserv.com" target="_blank" rel="noopener" style="color: var(--primary); text-decoration: none;">kytechserv.com</a>
+                </address>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS Logic -->
+    <script src="app.js"></script>
+</body>
+</html>
