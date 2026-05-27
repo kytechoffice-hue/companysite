@@ -1,0 +1,17 @@
+# Clean URLs configuration for Hostinger (Apache/LiteSpeed)
+Options -MultiViews
+RewriteEngine On
+
+# 1. Redirect trailing slashes to non-trailing slashes (except for actual directories)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} (.+)/$
+RewriteRule ^ %1 [R=301,L]
+
+# 2. Redirect external requests for .html files to extensionless URLs (SEO friendly)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+(.+)\.html\ HTTP [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# 3. Internally rewrite extensionless URLs to their .html counterparts if they exist
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L]
