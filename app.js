@@ -45,6 +45,22 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================================================
     const header = document.getElementById('main-header');
     const sections = document.querySelectorAll('section');
+    let cachedSections = [];
+
+    const updateSectionCache = () => {
+        cachedSections = Array.from(sections).map(section => ({
+            id: section.getAttribute('id'),
+            offsetTop: section.offsetTop,
+            clientHeight: section.clientHeight
+        }));
+    };
+
+    // Initial cache calculation
+    updateSectionCache();
+
+    // Recalculate offsets on window resize or when layout changes
+    window.addEventListener('resize', updateSectionCache);
+    window.addEventListener('load', updateSectionCache);
 
     window.addEventListener('scroll', () => {
         // Sticky Header class addition
@@ -56,11 +72,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Scroll Spy active nav indicators
         let currentSec = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (window.scrollY >= (sectionTop - 180)) {
-                currentSec = section.getAttribute('id');
+        cachedSections.forEach(sec => {
+            if (window.scrollY >= (sec.offsetTop - 180)) {
+                currentSec = sec.id;
             }
         });
 
