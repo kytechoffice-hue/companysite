@@ -1016,17 +1016,58 @@ section {
     color: #fff;
 }
 
-.service-card h3 {
+.service-card h2, .service-card h3 {
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
+    transition: color var(--transition-normal);
+}
+
+.service-card:hover h2, .service-card:hover h3 {
+    color: var(--primary);
 }
 
 .service-card p {
     color: var(--text-secondary);
     font-size: 0.975rem;
-    margin-bottom: 2rem;
-    flex-grow: 1;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.service-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    margin-top: auto;
+}
+
+.service-features li {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color var(--transition-fast);
+}
+
+.service-card:hover .service-features li {
+    color: var(--text-primary);
+}
+
+.service-features li svg {
+    width: 16px;
+    height: 16px;
+    color: var(--primary);
+    flex-shrink: 0;
+    transition: transform var(--transition-fast);
+}
+
+.service-card:hover .service-features li svg {
+    transform: scale(1.1);
 }
 
 .service-link {
