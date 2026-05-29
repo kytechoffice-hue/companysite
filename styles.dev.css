@@ -1208,6 +1208,72 @@ section {
     color: var(--text-secondary);
 }
 
+.product-title {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 0.25rem;
+    color: var(--text-primary);
+    font-family: var(--font-heading);
+}
+
+.product-subtitle {
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.product-desc {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.product-features-title {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.product-features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+.product-features-list li {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color var(--transition-fast);
+}
+
+.portfolio-item:hover .product-features-list li {
+    color: var(--text-primary);
+}
+
+.product-features-list li svg {
+    width: 14px;
+    height: 14px;
+    color: var(--primary);
+    flex-shrink: 0;
+    transition: transform var(--transition-fast);
+}
+
+.portfolio-item:hover .product-features-list li svg {
+    transform: scale(1.1);
+}
+
 /* ==========================================================================
    BLOG SECTION
    ========================================================================== */
