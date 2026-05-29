@@ -449,7 +449,8 @@
                 <div class="footer-col-title">Newsletter</div>
                 <p class="footer-desc" style="margin-bottom: 0.75rem;">Subscribe to receive tech updates, marketing insights, and guides directly in your inbox.</p>
                 <form class="newsletter-form" id="newsletter-form-element">
-                    <input type="email" class="newsletter-input" placeholder="Your Email Address" required aria-label="Newsletter Email">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="email" class="newsletter-input" name="Email" placeholder="Your Email Address" required aria-label="Newsletter Email">
                     <button type="submit" class="newsletter-btn" aria-label="Subscribe">
                         <i data-lucide="mail" style="width: 16px; height: 16px;"></i>
                     </button>
@@ -481,17 +482,18 @@
             </div>
 
             <form id="modal-quote-form">
+                <input type="hidden" name="_captcha" value="false">
                 <div class="form-group">
                     <label for="modal-name" class="form-label">Your Name</label>
-                    <input type="text" id="modal-name" class="form-control" placeholder="Jane Smith" required>
+                    <input type="text" id="modal-name" name="Name" class="form-control" placeholder="Jane Smith" required>
                 </div>
                 <div class="form-group">
                     <label for="modal-email" class="form-label">Email Address</label>
-                    <input type="email" id="modal-email" class="form-control" placeholder="jane@example.com" required>
+                    <input type="email" id="modal-email" name="Email" class="form-control" placeholder="jane@example.com" required>
                 </div>
                 <div class="form-group">
                     <label for="modal-budget" class="form-label">Estimated Budget</label>
-                    <select id="modal-budget" class="form-control" required style="appearance: none; -webkit-appearance: none;">
+                    <select id="modal-budget" name="Budget" class="form-control" required style="appearance: none; -webkit-appearance: none;">
                         <option value="" disabled selected>Select budget range</option>
                         <option value="under-50k">Under ₹50,000</option>
                         <option value="50k-200k">₹50,000 - ₹2,00,000</option>
@@ -501,7 +503,7 @@
                 </div>
                 <div class="form-group">
                     <label for="modal-desc" class="form-label">Brief Project Summary</label>
-                    <textarea id="modal-desc" class="form-control" placeholder="Share what you'd like to achieve..." required></textarea>
+                    <textarea id="modal-desc" name="Summary" class="form-control" placeholder="Share what you'd like to achieve..." required></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary form-submit-btn">
                     Request Quote <i data-lucide="arrow-right" class="btn-icon"></i>

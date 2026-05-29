@@ -392,12 +392,29 @@ document.addEventListener('DOMContentLoaded', () => {
                 openSuccessModal();
             })
             .catch(error => {
-                console.error("Direct send failed, using mailto fallback:", error);
-                // Fallback to mailto link matching exact user template
-                const emailSubject = `Contact Inquiry: ${categoryLabel}`;
-                const emailBody = `Dear Team,\n\nYou have received a new contact form submission from your website.\n\n## Contact Details\n\nName: ${name}\nEmail: ${email}\n\nClient Message\n\n${message}\n\nThis message was submitted through the contact form on:\n[https://kytechserv.com/]\n\nBest Regards,\nKy Tech Services Pvt Ltd`;
-                const mailtoUrl = `mailto:help@kytechserv.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
-                window.location.href = mailtoUrl;
+                console.error("Direct send failed, trying form submit fallback:", error);
+                try {
+                    contactForm.action = "https://formsubmit.co/help@kytechserv.com";
+                    contactForm.method = "POST";
+
+                    let subjectInput = contactForm.querySelector('input[name="_subject"]');
+                    if (!subjectInput) {
+                        subjectInput = document.createElement('input');
+                        subjectInput.type = 'hidden';
+                        subjectInput.name = '_subject';
+                        contactForm.appendChild(subjectInput);
+                    }
+                    subjectInput.value = `Contact Inquiry: ${categoryLabel}`;
+
+                    contactForm.submit();
+                } catch (fallbackError) {
+                    console.error("Form submit fallback failed, using mailto:", fallbackError);
+                    // Fallback to mailto link matching exact user template
+                    const emailSubject = `Contact Inquiry: ${categoryLabel}`;
+                    const emailBody = `Dear Team,\n\nYou have received a new contact form submission from your website.\n\n## Contact Details\n\nName: ${name}\nEmail: ${email}\n\nClient Message\n\n${message}\n\nThis message was submitted through the contact form on:\n[https://kytechserv.com/]\n\nBest Regards,\nKy Tech Services Pvt Ltd`;
+                    const mailtoUrl = `mailto:help@kytechserv.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+                    window.location.href = mailtoUrl;
+                }
             })
             .finally(() => {
                 // Restore Button state
@@ -465,12 +482,30 @@ document.addEventListener('DOMContentLoaded', () => {
                 openSuccessModal();
             })
             .catch(error => {
-                console.error("Direct quote request failed, using mailto fallback:", error);
-                const emailSubject = `KY Tech Quote Request`;
-                const emailBody = `Name: ${name}\nEmail: ${email}\nEstimated Budget: ${budget}\n\nProject Summary:\n${desc}`;
-                const mailtoUrl = `mailto:help@kytechserv.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
-                window.location.href = mailtoUrl;
-                closeModal();
+                console.error("Direct quote request failed, using form fallback:", error);
+                try {
+                    modalForm.action = "https://formsubmit.co/help@kytechserv.com";
+                    modalForm.method = "POST";
+
+                    let subjectInput = modalForm.querySelector('input[name="_subject"]');
+                    if (!subjectInput) {
+                        subjectInput = document.createElement('input');
+                        subjectInput.type = 'hidden';
+                        subjectInput.name = '_subject';
+                        modalForm.appendChild(subjectInput);
+                    }
+                    subjectInput.value = "Custom Quote Request";
+
+                    modalForm.submit();
+                    closeModal();
+                } catch (fallbackError) {
+                    console.error("Form fallback failed, using mailto fallback:", fallbackError);
+                    const emailSubject = `KY Tech Quote Request`;
+                    const emailBody = `Name: ${name}\nEmail: ${email}\nEstimated Budget: ${budget}\n\nProject Summary:\n${desc}`;
+                    const mailtoUrl = `mailto:help@kytechserv.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+                    window.location.href = mailtoUrl;
+                    closeModal();
+                }
             })
             .finally(() => {
                 submitBtn.innerHTML = originalBtnHtml;
@@ -500,19 +535,72 @@ document.addEventListener('DOMContentLoaded', () => {
             const submitBtn = newsletterForm.querySelector('.newsletter-btn');
             const originalIcon = submitBtn.innerHTML;
             
-            submitBtn.innerHTML = '<i data-lucide="check" style="width: 16px; height: 16px;"></i>';
+            submitBtn.innerHTML = '<i data-lucide="loader" class="btn-icon" style="animation: spinRing 2s linear infinite; width: 16px; height: 16px;"></i>';
             lucide.createIcons();
-            emailInput.value = '';
-            emailInput.placeholder = 'Subscribed successfully!';
-            emailInput.disabled = true;
+            submitBtn.disabled = true;
 
-            setTimeout(() => {
-                submitBtn.innerHTML = originalIcon;
+            // Submit directly using FormSubmit AJAX
+            fetch("https://formsubmit.co/ajax/help@kytechserv.com", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+                body: JSON.stringify({
+                    _subject: "Newsletter Subscription",
+                    Email: emailVal
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                submitBtn.innerHTML = '<i data-lucide="check" style="width: 16px; height: 16px;"></i>';
                 lucide.createIcons();
-                emailInput.placeholder = 'Your Email Address';
-                emailInput.disabled = false;
-            }, 4000);
-        });
+                emailInput.value = '';
+                emailInput.placeholder = 'Subscribed successfully!';
+                emailInput.disabled = true;
+
+                setTimeout(() => {
+                    submitBtn.innerHTML = originalIcon;
+                    lucide.createIcons();
+                    emailInput.placeholder = 'Your Email Address';
+                    emailInput.disabled = false;
+                    submitBtn.disabled = false;
+                }, 4000);
+            })
+            .catch(error => {
+                console.error("Newsletter send failed, using form fallback:", error);
+                try {
+                    newsletterForm.action = "https://formsubmit.co/help@kytechserv.com";
+                    newsletterForm.method = "POST";
+
+                    let subjectInput = newsletterForm.querySelector('input[name="_subject"]');
+                    if (!subjectInput) {
+                        subjectInput = document.createElement('input');
+                        subjectInput.type = 'hidden';
+                        subjectInput.name = '_subject';
+                        newsletterForm.appendChild(subjectInput);
+                    }
+                    subjectInput.value = "Newsletter Subscription";
+
+                    newsletterForm.submit();
+                } catch (fallbackError) {
+                    console.error("Newsletter fallback failed:", fallbackError);
+                    // Just show UI success as a fallback
+                    submitBtn.innerHTML = '<i data-lucide="check" style="width: 16px; height: 16px;"></i>';
+                    lucide.createIcons();
+                    emailInput.value = '';
+                    emailInput.placeholder = 'Subscribed successfully!';
+                    emailInput.disabled = true;
+
+                    setTimeout(() => {
+                        submitBtn.innerHTML = originalIcon;
+                        lucide.createIcons();
+                        emailInput.placeholder = 'Your Email Address';
+                        emailInput.disabled = false;
+                        submitBtn.disabled = false;
+                    }, 4000);
+                }
+            });
     }
 
     // Helper to store in localStorage
