@@ -601,6 +601,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }, 4000);
                 }
             });
+        });
     }
 
     // Helper to store in localStorage
