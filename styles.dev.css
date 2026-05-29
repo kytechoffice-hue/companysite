@@ -1815,3 +1815,41 @@ textarea.form-control {
 .privacy-modal-body::-webkit-scrollbar-thumb:hover {
     background: var(--text-light);
 }
+
+/* ==========================================================================
+   HOMEPAGE ADDITIONAL SECTIONS STYLES
+   ========================================================================== */
+.partner-section, .why-choose-section, .growth-section, .process-section, .cta-banner-section {
+    position: relative;
+}
+
+.why-choose-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.process-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    position: relative;
+}
+
+@media (max-width: 1024px) {
+    .process-steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .why-choose-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .process-steps-grid {
+        grid-template-columns: 1fr;
+    }
+}
