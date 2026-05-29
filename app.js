@@ -62,28 +62,40 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', updateSectionCache);
     window.addEventListener('load', updateSectionCache);
 
+    let lastScrollY = 0;
+    let scrollTicking = false;
+
     window.addEventListener('scroll', () => {
-        // Sticky Header class addition
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
+        lastScrollY = window.scrollY;
+
+        if (!scrollTicking) {
+            window.requestAnimationFrame(() => {
+                // Sticky Header class addition
+                if (lastScrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+
+                // Scroll Spy active nav indicators
+                let currentSec = '';
+                cachedSections.forEach(sec => {
+                    if (lastScrollY >= (sec.offsetTop - 180)) {
+                        currentSec = sec.id;
+                    }
+                });
+
+                navLinksList.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${currentSec}`) {
+                        link.classList.add('active');
+                    }
+                });
+
+                scrollTicking = false;
+            });
+            scrollTicking = true;
         }
-
-        // Scroll Spy active nav indicators
-        let currentSec = '';
-        cachedSections.forEach(sec => {
-            if (window.scrollY >= (sec.offsetTop - 180)) {
-                currentSec = sec.id;
-            }
-        });
-
-        navLinksList.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${currentSec}`) {
-                link.classList.add('active');
-            }
-        });
     });
 
     // ==========================================================================
@@ -166,26 +178,37 @@ document.addEventListener('DOMContentLoaded', () => {
             height = window.innerHeight;
         });
 
+        let mouseX = 0;
+        let mouseY = 0;
+        let ticking = false;
+
         window.addEventListener('mousemove', (e) => {
-            const mouseX = e.clientX - width / 2;
-            const mouseY = e.clientY - height / 2;
+            mouseX = e.clientX - width / 2;
+            mouseY = e.clientY - height / 2;
 
-            // Compute tilt ratios (-1 to 1)
-            const ratioX = mouseX / (width / 2);
-            const ratioY = mouseY / (height / 2);
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    // Compute tilt ratios (-1 to 1)
+                    const ratioX = mouseX / (width / 2);
+                    const ratioY = mouseY / (height / 2);
 
-            // Apply different degrees of 3D parallax offsets
-            // Laptop base tilt
-            laptop.style.transform = `translateZ(20px) rotateY(${-10 + ratioX * 12}deg) rotateX(${10 - ratioY * 12}deg)`;
-            
-            // Phone tilt (slightly faster response)
-            phone.style.transform = `translateZ(50px) rotateY(${15 + ratioX * 18}deg) rotateX(${10 - ratioY * 18}deg) translateY(${ratioY * -10}px)`;
+                    // Apply different degrees of 3D parallax offsets
+                    // Laptop base tilt
+                    laptop.style.transform = `translateZ(20px) rotateY(${-10 + ratioX * 12}deg) rotateX(${10 - ratioY * 12}deg)`;
+                    
+                    // Phone tilt (slightly faster response)
+                    phone.style.transform = `translateZ(50px) rotateY(${15 + ratioX * 18}deg) rotateX(${10 - ratioY * 18}deg) translateY(${ratioY * -10}px)`;
 
-            // Floating floaters depth parallax translation
-            floatCode.style.transform = `translateZ(85px) translateX(${ratioX * 30}px) translateY(${ratioY * 30}px)`;
-            floatGlobe.style.transform = `translateZ(95px) translateX(${ratioX * -25}px) translateY(${ratioY * -25}px)`;
-            floatCog.style.transform = `translateZ(65px) translateX(${ratioX * 20}px) translateY(${ratioY * -20}px)`;
-            floatAnalytics.style.transform = `translateZ(75px) translateX(${ratioX * -35}px) translateY(${ratioY * 35}px)`;
+                    // Floating floaters depth parallax translation
+                    floatCode.style.transform = `translateZ(85px) translateX(${ratioX * 30}px) translateY(${ratioY * 30}px)`;
+                    floatGlobe.style.transform = `translateZ(95px) translateX(${ratioX * -25}px) translateY(${ratioY * -25}px)`;
+                    floatCog.style.transform = `translateZ(65px) translateX(${ratioX * 20}px) translateY(${ratioY * -20}px)`;
+                    floatAnalytics.style.transform = `translateZ(75px) translateX(${ratioX * -35}px) translateY(${ratioY * 35}px)`;
+
+                    ticking = false;
+                });
+                ticking = true;
+            }
         });
     }
 
