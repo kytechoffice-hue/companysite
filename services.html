@@ -52,7 +52,7 @@
 
             <!-- Actions (Theme Toggle & CTA) -->
             <div class="nav-actions">
-                <div class="theme-toggle" id="theme-btn" title="Toggle Theme" aria-label="Toggle Theme">
+                <div class="theme-toggle" id="theme-btn" role="button" tabindex="0" title="Toggle Theme" aria-label="Toggle Theme">
                     <svg class="theme-toggle-icon sun-icon" viewBox="0 0 24 24">
                         <circle cx="12" cy="12" r="4" />
                         <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
@@ -64,7 +64,7 @@
                 <button class="btn btn-primary btn-cta" id="cta-quote-btn">
                     Get a Quote <i data-lucide="arrow-up-right" class="btn-icon"></i>
                 </button>
-                <div class="burger-menu" id="menu-toggle" aria-label="Toggle Menu">
+                <div class="burger-menu" id="menu-toggle" role="button" tabindex="0" aria-label="Toggle Menu">
                     <div class="burger-line"></div>
                     <div class="burger-line"></div>
                     <div class="burger-line"></div>
@@ -72,6 +72,7 @@
             </div>
         </div>
     </header>
+    <main>
 
     <!-- Services Section -->
     <section class="services" id="services" style="background: hsla(var(--bg-secondary-raw), 0.5); padding-top: 8rem; min-height: 80vh;">
@@ -81,7 +82,7 @@
                     <div class="section-tag" style="margin-left: 0;">
                         <span class="dot"></span> Our Expertise
                     </div>
-                    <h2 class="section-title" style="margin-left: 0;">What We <span>Do Best</span></h2>
+                    <h1 class="section-title" style="margin-left: 0;">What We <span>Do Best</span></h1>
                     <p class="section-desc" style="max-width: 100%; margin-bottom: 1.5rem;">We offer end-to-end digital solutions designed to help your brand conquer the online landscape, drive customer engagement, and streamline operations.</p>
                     <p class="section-desc" style="max-width: 100%; font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 0;">Our dedicated team leverages cutting-edge technology, strategic search engine optimization, and robust application architecture to deliver products that yield real business growth. From custom enterprise web applications to C# backend management, we construct tech platforms that deliver 24/7 reliability.</p>
                 </div>
@@ -99,7 +100,7 @@
                     <div class="service-icon-box">
                         <i data-lucide="code-2"></i>
                     </div>
-                    <h3>Website Development</h3>
+                    <h2>Website Development</h2>
                     <p>High-speed, SEO-optimized, responsive custom websites and web applications built using cutting-edge technologies to guarantee conversions and seamless performance.</p>
                 </div>
 
@@ -108,7 +109,7 @@
                     <div class="service-icon-box">
                         <i data-lucide="trending-up"></i>
                     </div>
-                    <h3>Digital Marketing</h3>
+                    <h2>Digital Marketing</h2>
                     <p>Drive organic traffic, rank #1 on search result pages, and generate qualified leads with our data-driven SEO, Google Ads, and Social Media Marketing campaigns.</p>
                 </div>
 
@@ -117,7 +118,7 @@
                     <div class="service-icon-box">
                         <i data-lucide="monitor"></i>
                     </div>
-                    <h3>Windows App Development</h3>
+                    <h2>Windows App Development</h2>
                     <p>Tailor-made, robust, secure Windows applications built with C# .NET to streamline your internal enterprise workflows and maximize local machine efficiency.</p>
                 </div>
 
@@ -126,7 +127,7 @@
                     <div class="service-icon-box">
                         <i data-lucide="edit-3"></i>
                     </div>
-                    <h3>Content Writing</h3>
+                    <h2>Content Writing</h2>
                     <p>Copywriting that engages readers, builds authority, and tells your brand story clearly. From landing page copy to technical whitepapers, we compose content that converts.</p>
                 </div>
 
@@ -135,7 +136,7 @@
                     <div class="service-icon-box">
                         <i data-lucide="book-open"></i>
                     </div>
-                    <h3>Blog Writing</h3>
+                    <h2>Blog Writing</h2>
                     <p>Maintain an active, engaging industry blog. We write high-quality, keyword-rich posts to organically climb search rankings and establish market leadership.</p>
                 </div>
 
@@ -144,13 +145,14 @@
                     <div class="service-icon-box">
                         <i data-lucide="cpu"></i>
                     </div>
-                    <h3>Complete IT Solutions</h3>
+                    <h2>Complete IT Solutions</h2>
                     <p>Cloud management, database integrations, backend setups, performance audits, and dedicated IT maintenance to keep your tech infrastructure online 24/7.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    </main>
     <!-- Footer Section -->
     <footer class="footer">
         <div class="container footer-grid">
@@ -180,7 +182,7 @@
             </div>
 
             <div class="footer-col">
-                <h4>Quick Links</h4>
+                <div class="footer-col-title">Quick Links</div>
                 <div class="footer-links">
                     <a href="/">Home</a>
                     <a href="/about">About Us</a>
@@ -190,7 +192,7 @@
             </div>
 
             <div class="footer-col">
-                <h4>Our Services</h4>
+                <div class="footer-col-title">Our Services</div>
                 <div class="footer-links">
                     <a href="#services">Web Development</a>
                     <a href="#services">Digital Marketing</a>
@@ -201,7 +203,7 @@
             </div>
 
             <div class="footer-col">
-                <h4>Newsletter</h4>
+                <div class="footer-col-title">Newsletter</div>
                 <p class="footer-desc" style="margin-bottom: 0.75rem;">Subscribe to receive tech updates, marketing insights, and guides directly in your inbox.</p>
                 <form class="newsletter-form" id="newsletter-form-element">
                     <input type="email" class="newsletter-input" placeholder="Your Email Address" required aria-label="Newsletter Email">

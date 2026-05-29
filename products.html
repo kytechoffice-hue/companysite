@@ -52,7 +52,7 @@
 
             <!-- Actions (Theme Toggle & CTA) -->
             <div class="nav-actions">
-                <div class="theme-toggle" id="theme-btn" title="Toggle Theme" aria-label="Toggle Theme">
+                <div class="theme-toggle" id="theme-btn" role="button" tabindex="0" title="Toggle Theme" aria-label="Toggle Theme">
                     <svg class="theme-toggle-icon sun-icon" viewBox="0 0 24 24">
                         <circle cx="12" cy="12" r="4" />
                         <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
@@ -64,7 +64,7 @@
                 <button class="btn btn-primary btn-cta" id="cta-quote-btn">
                     Get a Quote <i data-lucide="arrow-up-right" class="btn-icon"></i>
                 </button>
-                <div class="burger-menu" id="menu-toggle" aria-label="Toggle Menu">
+                <div class="burger-menu" id="menu-toggle" role="button" tabindex="0" aria-label="Toggle Menu">
                     <div class="burger-line"></div>
                     <div class="burger-line"></div>
                     <div class="burger-line"></div>
@@ -72,6 +72,7 @@
             </div>
         </div>
     </header>
+    <main>
 
     <!-- Products Section -->
     <section class="portfolio" id="products" style="padding-top: 8rem; min-height: 80vh;">
@@ -80,7 +81,7 @@
                 <div class="section-tag">
                     <span class="dot"></span> Our Products
                 </div>
-                <h2 class="section-title">Our Featured <span>Products</span></h2>
+                <h1 class="section-title">Our Featured <span>Products</span></h1>
                 <p class="section-desc">Explore a selection of our latest software products and digital systems delivered across multiple industry domains, built with clean architectures.</p>
             </div>
 
@@ -104,12 +105,12 @@
                         <div class="portfolio-overlay">
                             <div class="portfolio-overlay-content">
                                 <span class="portfolio-tag">Web Development</span>
-                                <h4>KY eStore</h4>
+                                <h3>KY eStore</h3>
                             </div>
                         </div>
                     </div>
                     <div class="portfolio-info">
-                        <h3>KY eStore</h3>
+                        <h2>KY eStore</h2>
                         <p>An e-commerce platform offering Smart Online Shopping, Easy Product Search, Responsive Design, Secure Payment Gateway, Fast Checkout Process, and User Account Management.</p>
                     </div>
                 </div>
@@ -124,12 +125,12 @@
                         <div class="portfolio-overlay">
                             <div class="portfolio-overlay-content">
                                 <span class="portfolio-tag">Desktop Apps</span>
-                                <h4>KY mStore</h4>
+                                <h3>KY mStore</h3>
                             </div>
                         </div>
                     </div>
                     <div class="portfolio-info">
-                        <h3>KY mStore</h3>
+                        <h2>KY mStore</h2>
                         <p>A hybrid retail solution offering Smart Offline Shopping, Easy Product Search, Responsive Design, Secure Payment Gateway, Fast Checkout Process, and User Account Management.</p>
                     </div>
                 </div>
@@ -144,12 +145,12 @@
                         <div class="portfolio-overlay">
                             <div class="portfolio-overlay-content">
                                 <span class="portfolio-tag">Web Development</span>
-                                <h4>Nabhik Matrimonial</h4>
+                                <h3>Nabhik Matrimonial</h3>
                             </div>
                         </div>
                     </div>
                     <div class="portfolio-info">
-                        <h3>Nabhik Matrimonial</h3>
+                        <h2>Nabhik Matrimonial</h2>
                         <p>Nabhik Matrimonial is a modern matrimonial platform specially designed to connect individuals and families within the Nabhik community. The platform provides a secure, trusted, and user-friendly environment to help users find suitable life partners based on preferences, values, education, profession, and family background.</p>
                     </div>
                 </div>
@@ -159,6 +160,7 @@
 
 
 
+    </main>
     <!-- Footer Section -->
     <footer class="footer">
         <div class="container footer-grid">
@@ -188,7 +190,7 @@
             </div>
 
             <div class="footer-col">
-                <h4>Quick Links</h4>
+                <div class="footer-col-title">Quick Links</div>
                 <div class="footer-links">
                     <a href="/">Home</a>
                     <a href="/about">About Us</a>
@@ -198,7 +200,7 @@
             </div>
 
             <div class="footer-col">
-                <h4>Our Services</h4>
+                <div class="footer-col-title">Our Services</div>
                 <div class="footer-links">
                     <a href="#services">Web Development</a>
                     <a href="#services">Digital Marketing</a>
@@ -209,7 +211,7 @@
             </div>
 
             <div class="footer-col">
-                <h4>Newsletter</h4>
+                <div class="footer-col-title">Newsletter</div>
                 <p class="footer-desc" style="margin-bottom: 0.75rem;">Subscribe to receive tech updates, marketing insights, and guides directly in your inbox.</p>
                 <form class="newsletter-form" id="newsletter-form-element">
                     <input type="email" class="newsletter-input" placeholder="Your Email Address" required aria-label="Newsletter Email">

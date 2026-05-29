@@ -158,11 +158,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const floatAnalytics = document.getElementById('float-analytics-card');
 
     if (heroMockupWrapper) {
+        let width = window.innerWidth;
+        let height = window.innerHeight;
+
+        window.addEventListener('resize', () => {
+            width = window.innerWidth;
+            height = window.innerHeight;
+        });
+
         window.addEventListener('mousemove', (e) => {
-            // Get center point of wrapper (or window for global tracking)
-            const width = window.innerWidth;
-            const height = window.innerHeight;
-            
             const mouseX = e.clientX - width / 2;
             const mouseY = e.clientY - height / 2;
 

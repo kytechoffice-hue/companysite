@@ -52,7 +52,7 @@
 
             <!-- Actions (Theme Toggle & CTA) -->
             <div class="nav-actions">
-                <div class="theme-toggle" id="theme-btn" title="Toggle Theme" aria-label="Toggle Theme">
+                <div class="theme-toggle" id="theme-btn" role="button" tabindex="0" title="Toggle Theme" aria-label="Toggle Theme">
                     <svg class="theme-toggle-icon sun-icon" viewBox="0 0 24 24">
                         <circle cx="12" cy="12" r="4" />
                         <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
@@ -64,7 +64,7 @@
                 <button class="btn btn-primary btn-cta" id="cta-quote-btn">
                     Get a Quote <i data-lucide="arrow-up-right" class="btn-icon"></i>
                 </button>
-                <div class="burger-menu" id="menu-toggle" aria-label="Toggle Menu">
+                <div class="burger-menu" id="menu-toggle" role="button" tabindex="0" aria-label="Toggle Menu">
                     <div class="burger-line"></div>
                     <div class="burger-line"></div>
                     <div class="burger-line"></div>
@@ -72,6 +72,7 @@
             </div>
         </div>
     </header>
+    <main>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
@@ -111,7 +112,7 @@
                         <div class="notch"></div>
                         <div class="phone-content" style="margin-top: 1.5rem; padding: 0.5rem;">
                             <img src="logo-icon.webp" alt="Phone Logo" style="height: 38px; width: auto; margin: 0 auto 0.75rem; display: block; object-fit: contain;">
-                            <h4>Working For Your</h4>
+                            <div style="font-weight: 700; font-size: 1rem; margin-bottom: 0.25rem;">Working For Your</div>
                             <p>Success</p>
                             <div class="phone-progress">
                                 <div class="phone-progress-fill"></div>
@@ -204,7 +205,8 @@
                 <a href="/products" class="btn btn-secondary">Explore Products</a>
             </div>
         </div>
-    </section><!-- Footer Section -->
+    </section>
+    </main><!-- Footer Section -->
     <footer class="footer">
         <div class="container footer-grid">
             <div class="footer-col">
@@ -233,7 +235,7 @@
             </div>
 
             <div class="footer-col">
-                <h4>Quick Links</h4>
+                <div class="footer-col-title">Quick Links</div>
                 <div class="footer-links">
                     <a href="/">Home</a>
                     <a href="/about">About Us</a>
@@ -243,7 +245,7 @@
             </div>
 
             <div class="footer-col">
-                <h4>Our Services</h4>
+                <div class="footer-col-title">Our Services</div>
                 <div class="footer-links">
                     <a href="#services">Web Development</a>
                     <a href="#services">Digital Marketing</a>
@@ -254,7 +256,7 @@
             </div>
 
             <div class="footer-col">
-                <h4>Newsletter</h4>
+                <div class="footer-col-title">Newsletter</div>
                 <p class="footer-desc" style="margin-bottom: 0.75rem;">Subscribe to receive tech updates, marketing insights, and guides directly in your inbox.</p>
                 <form class="newsletter-form" id="newsletter-form-element">
                     <input type="email" class="newsletter-input" placeholder="Your Email Address" required aria-label="Newsletter Email">
