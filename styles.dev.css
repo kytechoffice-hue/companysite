@@ -1042,7 +1042,6 @@ section {
     flex-direction: column;
     gap: 0.75rem;
     width: 100%;
-    margin-top: auto;
 }
 
 .service-features li {
