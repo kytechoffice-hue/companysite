@@ -78,17 +78,21 @@
     </header>
     <main>
 
-    <!-- About Us Section -->
-    <section class="about" id="about" style="padding-top: 8rem; min-height: 80vh;">
+    <!-- About Us Hero Section -->
+    <section class="about-hero" id="about-hero" style="padding-top: 8rem; min-height: 70vh; display: flex; align-items: center;">
         <div class="container about-grid">
             <div class="about-img-container">
-                <div class="about-img-box">
+                <div class="about-img-box" style="position: relative;">
                     <!-- Clean SVG Vector representing high-tech software engineering -->
-                    <svg viewBox="0 0 500 480" width="100%" height="480px" style="background: radial-gradient(circle at center, #1b263b 0%, #0d1117 100%);">
+                    <svg viewBox="0 0 500 480" width="100%" height="480px" style="background: radial-gradient(circle at center, #1b263b 0%, #0d1117 100%); border-radius: var(--radius-md); box-shadow: var(--shadow-md);">
                         <defs>
                             <linearGradient id="gridGrad" x1="0%" y1="0%" x2="0%" y2="100%">
                                 <stop offset="0%" stop-color="rgba(0, 102, 255, 0.3)" />
                                 <stop offset="100%" stop-color="rgba(0, 102, 255, 0)" />
+                            </linearGradient>
+                            <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#4364f7" />
+                                <stop offset="100%" stop-color="#6fb1fc" />
                             </linearGradient>
                         </defs>
                         <!-- Grid lines -->
@@ -111,7 +115,6 @@
                             <rect width="190" height="130" rx="12" fill="rgba(0,102,255,0.1)" stroke="rgba(0,102,255,0.3)" stroke-width="2" />
                             <circle cx="20" cy="20" r="5" fill="#00f0ff" />
                             <rect x="40" y="17" width="80" height="7" rx="3.5" fill="rgba(255,255,255,0.3)" />
-                            <!-- Visual Chart Graph inside card -->
                             <path d="M 20 100 Q 50 60 80 80 T 140 40 T 170 50" fill="none" stroke="#00f0ff" stroke-width="3" stroke-linecap="round" />
                             <path d="M 20 100 Q 50 60 80 80 T 140 40 T 170 50 L 170 110 L 20 110 Z" fill="url(#gridGrad)" />
                         </g>
@@ -128,41 +131,217 @@
                             <circle cx="0" cy="0" r="8" fill="#fff" />
                         </g>
                     </svg>
-                    <div class="about-experience-card">
-                        <div class="about-exp-num">10+</div>
-                        <div class="about-exp-lbl">Years Industry Experience</div>
-                    </div>
                 </div>
             </div>
             <div class="about-content">
                 <div class="section-tag">
-                    <span class="dot"></span> Who We Are
+                    <span class="dot"></span> About Us
                 </div>
-                <h1 class="section-title">We Lead with <span>Innovation</span> and Secure Growth</h1>
-                <p class="section-desc" style="margin-bottom: 2rem;">KY Tech Services is a modern technology company driven by a passion for building seamless digital products. We work closely with startups, SMEs, and large businesses to plan, design, develop, and market software that stands out.</p>
-                <p class="section-desc" style="margin-bottom: 2.5rem; font-size: 1rem;">We blend solid architecture, creative design, and strategic marketing to deliver products that yield measurable business growth. From custom enterprise web applications to hyper-targeted SEO content, we cover your complete digital roadmap.</p>
+                <h1 class="section-title">About <span>KY Tech Services Pvt Ltd</span></h1>
+                <h2 style="font-size: 1.5rem; font-weight: 700; color: var(--primary); margin-bottom: 1.5rem; line-height: 1.4;">Innovative IT Solutions for Modern Businesses</h2>
+                <p class="section-desc" style="max-width: 100%; margin-bottom: 0;">
+                    KY Tech Services Pvt Ltd is a growing technology company dedicated to providing creative digital solutions, software development, and professional IT services for startups, businesses, and organizations.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who We Are Section -->
+    <section class="who-we-are" id="who-we-are" style="background: hsla(var(--bg-secondary-raw), 0.35);">
+        <div class="container about-grid">
+            <div class="intro-content">
+                <div class="section-tag">
+                    <span class="dot"></span> Company Introduction
+                </div>
+                <h2 class="section-title">Who <span>We Are</span></h2>
+                <p class="section-desc-accent" style="font-size: 1.15rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 1.5rem;">
+                    KY Tech Services Pvt Ltd is a professional IT company focused on delivering high-quality digital services including Website Development, Web Application Development, Windows Application Development, Digital Marketing, SEO, Content Writing, and Technical Support.
+                </p>
+                <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-secondary);">
+                    We believe in innovation, technology, and customer satisfaction. Our mission is to help businesses establish a strong digital presence using modern technologies and creative solutions.
+                </p>
+            </div>
+            <div class="intro-cards" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                <div class="glass-card" style="padding: 2rem; border-radius: var(--radius-md);">
+                    <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--primary); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.75rem;"><i data-lucide="lightbulb" style="width: 24px; height: 24px;"></i> Innovation Driven</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">Leveraging modern technology frameworks to craft intelligent enterprise solutions.</p>
+                </div>
+                <div class="glass-card" style="padding: 2rem; border-radius: var(--radius-md);">
+                    <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--primary); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.75rem;"><i data-lucide="smile" style="width: 24px; height: 24px;"></i> Client Centric</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">Prioritizing user experience and commercial value in every deliverable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="mission-vision" id="mission-vision">
+        <div class="container mission-vision-grid">
+            <!-- Our Mission -->
+            <div class="glass-card" style="padding: 3.5rem 2.5rem; border-radius: var(--radius-lg); position: relative; overflow: hidden; background: linear-gradient(135deg, rgba(var(--bg-glass-raw), 0.8) 0%, rgba(var(--bg-glass-raw), 0.4) 100%);">
+                <div style="position: absolute; top: -30px; right: -30px; width: 120px; height: 120px; border-radius: 50%; background: var(--primary-light); filter: blur(40px); z-index: -1;"></div>
+                <div style="width: 60px; height: 60px; border-radius: 16px; background: rgba(0, 102, 255, 0.1); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.75rem; margin-bottom: 2rem;"><i data-lucide="target"></i></div>
+                <h2 style="font-size: 1.75rem; font-weight: 800; margin-bottom: 1rem;">Our <span>Mission</span></h2>
+                <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary);">
+                    To provide reliable, affordable, and innovative IT solutions that help businesses grow digitally and achieve long-term success.
+                </p>
+            </div>
+            
+            <!-- Our Vision -->
+            <div class="glass-card" style="padding: 3.5rem 2.5rem; border-radius: var(--radius-lg); position: relative; overflow: hidden; background: linear-gradient(135deg, rgba(var(--bg-glass-raw), 0.8) 0%, rgba(var(--bg-glass-raw), 0.4) 100%);">
+                <div style="position: absolute; top: -30px; right: -30px; width: 120px; height: 120px; border-radius: 50%; background: var(--accent-glow); filter: blur(40px); z-index: -1;"></div>
+                <div style="width: 60px; height: 60px; border-radius: 16px; background: rgba(0, 102, 255, 0.1); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.75rem; margin-bottom: 2rem;"><i data-lucide="eye"></i></div>
+                <h2 style="font-size: 1.75rem; font-weight: 800; margin-bottom: 1rem;">Our <span>Vision</span></h2>
+                <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary);">
+                    To become a trusted global technology partner known for quality services, innovation, and customer-focused digital solutions.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Do Section -->
+    <section class="expertise-section" id="expertise" style="background: hsla(var(--bg-secondary-raw), 0.35);">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <div class="section-tag" style="margin: 0 auto 1.5rem auto;">
+                    <span class="dot"></span> What We Do
+                </div>
+                <h2 class="section-title">Our <span>Expertise</span></h2>
+            </div>
+            
+            <div class="expertise-grid">
+                <div class="glass-card" style="padding: 2rem 1.5rem; text-align: center; border-radius: var(--radius-md); display: flex; flex-direction: column; align-items: center; gap: 0.75rem;">
+                    <div style="font-size: 1.75rem; color: var(--primary); margin-bottom: 0.25rem;"><i data-lucide="code-2"></i></div>
+                    <span style="font-weight: 700; font-size: 1rem;">Website Development</span>
+                </div>
+                <div class="glass-card" style="padding: 2rem 1.5rem; text-align: center; border-radius: var(--radius-md); display: flex; flex-direction: column; align-items: center; gap: 0.75rem;">
+                    <div style="font-size: 1.75rem; color: var(--primary); margin-bottom: 0.25rem;"><i data-lucide="globe"></i></div>
+                    <span style="font-weight: 700; font-size: 1rem;">Web Application Development</span>
+                </div>
+                <div class="glass-card" style="padding: 2rem 1.5rem; text-align: center; border-radius: var(--radius-md); display: flex; flex-direction: column; align-items: center; gap: 0.75rem;">
+                    <div style="font-size: 1.75rem; color: var(--primary); margin-bottom: 0.25rem;"><i data-lucide="laptop"></i></div>
+                    <span style="font-weight: 700; font-size: 1rem;">Software Solutions</span>
+                </div>
+                <div class="glass-card" style="padding: 2rem 1.5rem; text-align: center; border-radius: var(--radius-md); display: flex; flex-direction: column; align-items: center; gap: 0.75rem;">
+                    <div style="font-size: 1.75rem; color: var(--primary); margin-bottom: 0.25rem;"><i data-lucide="trending-up"></i></div>
+                    <span style="font-weight: 700; font-size: 1rem;">Digital Marketing</span>
+                </div>
+                <div class="glass-card" style="padding: 2rem 1.5rem; text-align: center; border-radius: var(--radius-md); display: flex; flex-direction: column; align-items: center; gap: 0.75rem;">
+                    <div style="font-size: 1.75rem; color: var(--primary); margin-bottom: 0.25rem;"><i data-lucide="search"></i></div>
+                    <span style="font-weight: 700; font-size: 1rem;">SEO Optimization</span>
+                </div>
+                <div class="glass-card" style="padding: 2rem 1.5rem; text-align: center; border-radius: var(--radius-md); display: flex; flex-direction: column; align-items: center; gap: 0.75rem;">
+                    <div style="font-size: 1.75rem; color: var(--primary); margin-bottom: 0.25rem;"><i data-lucide="edit-3"></i></div>
+                    <span style="font-weight: 700; font-size: 1rem;">Content Writing</span>
+                </div>
+                <div class="glass-card" style="padding: 2rem 1.5rem; text-align: center; border-radius: var(--radius-md); display: flex; flex-direction: column; align-items: center; gap: 0.75rem;">
+                    <div style="font-size: 1.75rem; color: var(--primary); margin-bottom: 0.25rem;"><i data-lucide="cpu"></i></div>
+                    <span style="font-weight: 700; font-size: 1rem;">Technical Support</span>
+                </div>
+                <div class="glass-card" style="padding: 2rem 1.5rem; text-align: center; border-radius: var(--radius-md); display: flex; flex-direction: column; align-items: center; gap: 0.75rem;">
+                    <div style="font-size: 1.75rem; color: var(--primary); margin-bottom: 0.25rem;"><i data-lucide="award"></i></div>
+                    <span style="font-weight: 700; font-size: 1rem;">Business Branding Solutions</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Values Section -->
+    <section class="values-section" id="values">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <div class="section-tag" style="margin: 0 auto 1.5rem auto;">
+                    <span class="dot"></span> Our Core Values
+                </div>
+                <h2 class="section-title">Our Core <span>Values</span></h2>
+            </div>
+            
+            <div class="values-grid">
+                <!-- Innovation -->
+                <div class="glass-card" style="padding: 2.5rem 2rem; border-radius: var(--radius-md); height: 100%;">
+                    <div style="width: 50px; height: 50px; border-radius: 12px; background: rgba(0, 102, 255, 0.1); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.5rem;"><i data-lucide="zap"></i></div>
+                    <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem;">Innovation</h3>
+                    <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">We use modern technologies and creative ideas to build powerful solutions.</p>
+                </div>
                 
-                <div class="about-features">
-                    <div class="about-feat-item">
-                        <div class="about-feat-icon">
-                            <i data-lucide="check-circle-2"></i>
-                        </div>
-                        <div>
-                            <h2>Creative Execution</h2>
-                            <p>We transform visual concepts into pixel-perfect frontend experiences.</p>
-                        </div>
+                <!-- Quality -->
+                <div class="glass-card" style="padding: 2.5rem 2rem; border-radius: var(--radius-md); height: 100%;">
+                    <div style="width: 50px; height: 50px; border-radius: 12px; background: rgba(0, 102, 255, 0.1); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.5rem;"><i data-lucide="award"></i></div>
+                    <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem;">Quality</h3>
+                    <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">We maintain high standards in every project we deliver.</p>
+                </div>
+                
+                <!-- Integrity -->
+                <div class="glass-card" style="padding: 2.5rem 2rem; border-radius: var(--radius-md); height: 100%;">
+                    <div style="width: 50px; height: 50px; border-radius: 12px; background: rgba(0, 102, 255, 0.1); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.5rem;"><i data-lucide="shield"></i></div>
+                    <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem;">Integrity</h3>
+                    <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">We believe in transparency, honesty, and professional ethics.</p>
+                </div>
+                
+                <!-- Customer Commitment -->
+                <div class="glass-card" style="padding: 2.5rem 2rem; border-radius: var(--radius-md); height: 100%;">
+                    <div style="width: 50px; height: 50px; border-radius: 12px; background: rgba(0, 102, 255, 0.1); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.5rem;"><i data-lucide="users"></i></div>
+                    <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem;">Customer Commitment</h3>
+                    <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">Our clients’ success is our priority.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievement / Statistics Section -->
+    <section class="about-stats-section" id="about-stats" style="background: hsla(var(--bg-secondary-raw), 0.35); padding: 5rem 0;">
+        <div class="container">
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <div class="stat-icon-wrapper">
+                        <i data-lucide="rocket"></i>
                     </div>
-                    <div class="about-feat-item">
-                        <div class="about-feat-icon">
-                            <i data-lucide="check-circle-2"></i>
-                        </div>
-                        <div>
-                            <h2>Secure Development</h2>
-                            <p>Every line of code is structured to ensure maximum uptime, speed, and safety.</p>
-                        </div>
+                    <div class="stat-info">
+                        <div class="stat-number" data-target="10">0</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon-wrapper">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-number" data-target="20">0</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon-wrapper">
+                        <i data-lucide="cpu"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-number" data-target="5">0</div>
+                        <div class="stat-label">IT Services</div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon-wrapper">
+                        <i data-lucide="headphones"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-number" data-target="24">0</div>
+                        <div class="stat-label">Support Availability</div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section" id="team" style="padding-bottom: 8rem; padding-top: 6rem;">
+        <div class="container" style="max-width: 900px; text-align: center;">
+            <div class="section-tag" style="margin: 0 auto 1.5rem auto;">
+                <span class="dot"></span> Dedicated Professionals
+            </div>
+            <h2 class="section-title" style="margin-bottom: 1.5rem;">Our <span>Team</span></h2>
+            <p class="section-desc" style="margin: 0 auto; max-width: 750px; font-size: 1.15rem; line-height: 1.8; color: var(--text-secondary);">
+                Our team consists of passionate developers, designers, digital marketers, and IT professionals dedicated to delivering high-quality solutions and exceptional customer support.
+            </p>
         </div>
     </section>
 
