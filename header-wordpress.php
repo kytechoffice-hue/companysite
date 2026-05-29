@@ -36,7 +36,7 @@
     <header class="header" id="main-header">
         <div class="container navbar">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>#home" class="logo-link" id="logo-anchor">
-                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/logo-icon.png" alt="<?php bloginfo('name'); ?> Logo" class="logo-img-icon" style="height: 45px; width: auto; object-fit: contain; transition: transform var(--transition-normal);">
+                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/logo-icon.png" alt="<?php bloginfo('name'); ?> Logo" class="logo-img-icon" width="45" height="45" style="height: 45px; width: auto; object-fit: contain; transition: transform var(--transition-normal);">
                 <div class="logo-text">
                     <span style="font-family: var(--font-heading); font-weight: 800; font-size: 1.3rem; letter-spacing: 0.05em; color: var(--text-primary);"><?php bloginfo('name'); ?></span>
                     <span style="display: block; font-size: 0.55rem; font-weight: 700; letter-spacing: 0.28em; color: var(--text-light); text-transform: uppercase;">Innovate • Secure • Deliver</span>
