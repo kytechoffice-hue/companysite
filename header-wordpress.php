@@ -23,6 +23,9 @@
     <meta property="og:url" content="<?php echo esc_url( home_url( '/' ) ); ?>">
     <meta property="og:type" content="website">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="<?php echo esc_url( get_template_directory_uri() ); ?>/logo-icon.png">
+
     <?php wp_head(); ?>
 </head>
 
@@ -65,7 +68,7 @@
 
             <!-- Actions (Theme Toggle & CTA) -->
             <div class="nav-actions">
-                <div class="theme-toggle" id="theme-btn" title="Toggle Theme" aria-label="Toggle Theme">
+                <div class="theme-toggle" id="theme-btn" role="button" tabindex="0" title="Toggle Theme" aria-label="Toggle Theme">
                     <svg class="theme-toggle-icon sun-icon" viewBox="0 0 24 24">
                         <circle cx="12" cy="12" r="4" />
                         <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
@@ -77,7 +80,7 @@
                 <button class="btn btn-primary btn-cta" id="cta-quote-btn">
                     Get a Quote <i data-lucide="arrow-up-right" class="btn-icon"></i>
                 </button>
-                <div class="burger-menu" id="menu-toggle" aria-label="Toggle Menu">
+                <div class="burger-menu" id="menu-toggle" role="button" tabindex="0" aria-label="Toggle Menu">
                     <div class="burger-line"></div>
                     <div class="burger-line"></div>
                     <div class="burger-line"></div>
