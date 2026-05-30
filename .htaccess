@@ -2,6 +2,11 @@
 Options -MultiViews
 RewriteEngine On
 
+# Redirect WWW to NON-WWW and force HTTPS
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\.kytechserv\.com [NC]
+RewriteRule ^(.*)$ https://kytechserv.com/$1 [L,R=301]
+
 # 1. Redirect trailing slashes to non-trailing slashes (except for actual directories)
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_URI} (.+)/$
