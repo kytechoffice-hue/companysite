@@ -87,7 +87,14 @@
                 </div>
                 <div class="about-img-container">
                     <div class="about-img-box" style="background: hsla(var(--bg-primary-raw), 0.6); backdrop-filter: blur(10px); padding: 1rem; display: flex; align-items: center; justify-content: center; height: auto;">
-                        <img src="services-banner.webp" alt="Our Services Working Process" width="600" height="400" style="height: auto; border-radius: var(--radius-md); object-fit: contain; filter: none;" loading="lazy">
+                        <img src="services-banner.webp" 
+                             srcset="services-banner-sm.webp 400w, services-banner.webp 600w" 
+                             sizes="(max-width: 576px) 100vw, (max-width: 991px) 500px, 600px" 
+                             alt="Our Services Working Process" 
+                             width="600" 
+                             height="400" 
+                             style="height: auto; border-radius: var(--radius-md); object-fit: contain; filter: none;" 
+                             loading="lazy">
                     </div>
                 </div>
             </div>
