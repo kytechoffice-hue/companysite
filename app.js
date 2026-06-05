@@ -289,12 +289,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Success Modal actions
     const openSuccessModal = () => {
-        successModal.classList.add('active');
+        if (successModal) {
+            successModal.classList.add('active');
+        }
         document.body.style.overflow = 'hidden';
     };
 
     const closeSuccessModal = () => {
-        successModal.classList.remove('active');
+        if (successModal) {
+            successModal.classList.remove('active');
+        }
         document.body.style.overflow = '';
     };
 
