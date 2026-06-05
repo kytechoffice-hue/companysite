@@ -1,5 +1,6 @@
 # Clean URLs configuration for Hostinger (Apache/LiteSpeed)
 Options -MultiViews
+ErrorDocument 404 /404.html
 RewriteEngine On
 
 # Redirect WWW to NON-WWW and force HTTPS

@@ -194,16 +194,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     // Apply different degrees of 3D parallax offsets
                     // Laptop base tilt
-                    laptop.style.transform = `translateZ(20px) rotateY(${-10 + ratioX * 12}deg) rotateX(${10 - ratioY * 12}deg)`;
+                    if (laptop) laptop.style.transform = `translateZ(20px) rotateY(${-10 + ratioX * 12}deg) rotateX(${10 - ratioY * 12}deg)`;
                     
                     // Phone tilt (slightly faster response)
-                    phone.style.transform = `translateZ(50px) rotateY(${15 + ratioX * 18}deg) rotateX(${10 - ratioY * 18}deg) translateY(${ratioY * -10}px)`;
+                    if (phone) phone.style.transform = `translateZ(50px) rotateY(${15 + ratioX * 18}deg) rotateX(${10 - ratioY * 18}deg) translateY(${ratioY * -10}px)`;
 
                     // Floating floaters depth parallax translation
-                    floatCode.style.transform = `translateZ(85px) translateX(${ratioX * 30}px) translateY(${ratioY * 30}px)`;
-                    floatGlobe.style.transform = `translateZ(95px) translateX(${ratioX * -25}px) translateY(${ratioY * -25}px)`;
-                    floatCog.style.transform = `translateZ(65px) translateX(${ratioX * 20}px) translateY(${ratioY * -20}px)`;
-                    floatAnalytics.style.transform = `translateZ(75px) translateX(${ratioX * -35}px) translateY(${ratioY * 35}px)`;
+                    if (floatCode) floatCode.style.transform = `translateZ(85px) translateX(${ratioX * 30}px) translateY(${ratioY * 30}px)`;
+                    if (floatGlobe) floatGlobe.style.transform = `translateZ(95px) translateX(${ratioX * -25}px) translateY(${ratioY * -25}px)`;
+                    if (floatCog) floatCog.style.transform = `translateZ(65px) translateX(${ratioX * 20}px) translateY(${ratioY * -20}px)`;
+                    if (floatAnalytics) floatAnalytics.style.transform = `translateZ(75px) translateX(${ratioX * -35}px) translateY(${ratioY * 35}px)`;
+
+                    // 404 Error page card tilt
+                    const errorCard = document.getElementById('error-card-node');
+                    if (errorCard) errorCard.style.transform = `translateZ(30px) rotateY(${-10 + ratioX * 15}deg) rotateX(${10 - ratioY * 15}deg)`;
 
                     ticking = false;
                 });
