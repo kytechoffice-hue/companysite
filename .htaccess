@@ -8,6 +8,11 @@ RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^www\.kytechserv\.com [NC]
 RewriteRule ^(.*)$ https://kytechserv.com/$1 [L,R=301]
 
+# Force 404 response status code for direct requests to 404.html or 404
+RewriteCond %{ENV:REDIRECT_STATUS} ^$
+RewriteCond %{THE_REQUEST} \s/+(404|404\.html)\s [NC]
+RewriteRule ^ - [R=404,L]
+
 # 1. Redirect trailing slashes to non-trailing slashes (except for actual directories)
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_URI} (.+)/$
