@@ -205,9 +205,18 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (floatCog) floatCog.style.transform = `translateZ(65px) translateX(${ratioX * 20}px) translateY(${ratioY * -20}px)`;
                     if (floatAnalytics) floatAnalytics.style.transform = `translateZ(75px) translateX(${ratioX * -35}px) translateY(${ratioY * 35}px)`;
 
-                    // 404 Error page card tilt
-                    const errorCard = document.getElementById('error-card-node');
-                    if (errorCard) errorCard.style.transform = `translateZ(30px) rotateY(${-10 + ratioX * 15}deg) rotateX(${10 - ratioY * 15}deg)`;
+                    // 404 Error page space elements tilt
+                    const errorEye = document.querySelector('.illust-eye');
+                    const errorStar = document.querySelector('.illust-star');
+                    const errorScribble = document.querySelector('.illust-scribble');
+                    const errorFlower = document.querySelector('.illust-flower');
+                    const errorWave = document.querySelector('.illust-wave');
+
+                    if (errorEye) errorEye.style.transform = `translateY(${ratioY * -15}px) translateX(${ratioX * -15}px) rotate(${ratioX * 8}deg)`;
+                    if (errorStar) errorStar.style.transform = `translateY(${ratioY * 20}px) translateX(${ratioX * 20}px) rotate(${45 + ratioX * -25}deg)`;
+                    if (errorScribble) errorScribble.style.transform = `translateY(${ratioY * -8}px) translateX(${ratioX * 8}px) scale(${1.03 + ratioY * 0.02})`;
+                    if (errorFlower) errorFlower.style.transform = `translateY(${ratioY * -25}px) translateX(${ratioX * 25}px) rotate(${-5 + ratioX * 10}deg)`;
+                    if (errorWave) errorWave.style.transform = `translateY(${ratioY * -12}px) translateX(${ratioX * -12}px) scaleX(${1.1 + ratioX * 0.1})`;
 
                     ticking = false;
                 });

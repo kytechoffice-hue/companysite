@@ -74,27 +74,89 @@
     <main>
         <!-- 404 Error Section -->
         <section class="error-section">
-            <div class="container error-container">
-                <!-- 3D Interactive Parallax Illustration -->
-                <div class="error-illustration" id="scene-3d">
-                    <div class="error-float-card" id="error-card-node">
-                        <i data-lucide="settings"></i>
-                        <span style="font-weight: 700; font-size: 0.95rem; color: var(--text-primary);">System Error</span>
-                    </div>
-                    <div class="error-floating-tag tag-left">&lt;404&gt;</div>
-                    <div class="error-floating-tag tag-right">page_lost</div>
-                </div>
+            <!-- Galaxy Dust overlay -->
+            <div class="error-galaxy-dust"></div>
 
+            <!-- SVG Space Illustrations -->
+            <!-- 1. Eye (Top-Left) -->
+            <svg viewBox="0 0 100 100" class="illust-element illust-eye" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="40" fill="#6c8ff5"/>
+                <path d="M 22 50 Q 50 25 78 50 Q 50 75 22 50 Z" fill="#ffffff"/>
+                <circle cx="50" cy="50" r="16" fill="#f87171"/>
+                <circle cx="50" cy="50" r="8" fill="#151b32"/>
+                <circle cx="46" cy="46" r="3" fill="#ffffff"/>
+            </svg>
+
+            <!-- 2. Starburst (Mid-Left) -->
+            <svg viewBox="0 0 100 100" class="illust-element illust-star" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="50,5 58,22 75,15 72,33 89,35 79,50 89,65 72,67 75,85 58,78 50,95 42,78 25,85 28,67 11,65 21,50 11,35 28,33 25,15 42,22" fill="#f3a58e"/>
+            </svg>
+
+            <!-- 3. Scribble (Bottom-Left) -->
+            <svg viewBox="0 0 200 100" class="illust-element illust-scribble" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 20 80 C 15 50, 45 20, 50 60 C 55 90, 85 40, 90 70 C 100 95, 130 30, 135 60 C 140 85, 170 20, 180 50" fill="none" stroke="#3b82f6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+
+            <!-- 4. Flower & Tongue (Top-Right) -->
+            <svg viewBox="0 0 200 200" class="illust-element illust-flower" xmlns="http://www.w3.org/2000/svg">
+                <g fill="#3b82f6">
+                    <circle cx="100" cy="40" r="25"/>
+                    <circle cx="130" cy="52" r="25"/>
+                    <circle cx="142" cy="82" r="25"/>
+                    <circle cx="130" cy="112" r="25"/>
+                    <circle cx="100" cy="124" r="25"/>
+                    <circle cx="70" cy="112" r="25"/>
+                    <circle cx="58" cy="82" r="25"/>
+                    <circle cx="70" cy="52" r="25"/>
+                    <circle cx="100" cy="82" r="38"/>
+                </g>
+                <path d="M 65 92 A 35 35 0 0 0 135 92 Z" fill="#1e1b4b" transform="rotate(-30, 100, 82)"/>
+                <path d="M 85 92 Q 65 110 50 100 T 35 112" fill="none" stroke="#f87171" stroke-width="8" stroke-linecap="round"/>
+            </svg>
+
+            <!-- 5. Wave line (Mid-Right) -->
+            <svg viewBox="0 0 100 20" class="illust-element illust-wave" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 5 10 Q 15 0 25 10 T 45 10 T 65 10 T 85 10" fill="none" stroke="#00f5c4" stroke-width="6" stroke-linecap="round"/>
+            </svg>
+
+            <!-- 6. 3D Steps (Bottom-Right) -->
+            <svg viewBox="0 0 300 200" class="illust-element illust-steps" xmlns="http://www.w3.org/2000/svg">
+                <!-- Step 1 (Bottom) -->
+                <polygon points="60,170 130,170 100,150 30,150" fill="#fffdeb"/>
+                <polygon points="30,150 60,170 60,200 30,200" fill="#312e81"/>
+                <polygon points="60,170 130,170 130,200 60,200" fill="#1e1b4b"/>
+                
+                <!-- Step 2 (Middle) -->
+                <polygon points="130,140 200,140 170,120 100,120" fill="#fffdeb"/>
+                <polygon points="100,120 130,140 130,200 100,200" fill="#312e81"/>
+                <polygon points="130,140 200,140 200,200 130,200" fill="#1e1b4b"/>
+                
+                <!-- Step 3 (Top) -->
+                <polygon points="200,110 270,110 240,90 170,90" fill="#fffdeb"/>
+                <polygon points="170,90 200,110 200,200 170,200" fill="#312e81"/>
+                <polygon points="200,110 270,110 270,200 200,200" fill="#1e1b4b"/>
+            </svg>
+
+            <!-- 7. Left Block (Bottom-Left) -->
+            <svg viewBox="0 0 150 200" class="illust-element" style="bottom: 0; left: 15%; width: 150px; height: 200px; z-index: 3;" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="80,180 130,180 110,165 60,165" fill="#fffdeb"/>
+                <polygon points="60,165 80,180 80,200 60,200" fill="#312e81"/>
+                <polygon points="80,180 130,180 130,200 80,200" fill="#1e1b4b"/>
+            </svg>
+
+            <!-- Main Content Container -->
+            <div class="container error-container" id="scene-3d">
+                <div class="error-tag">ERROR</div>
                 <div class="error-code">404</div>
-                <h1 class="error-title">Page Not Found</h1>
-                <p class="error-text">Oops! The page you are looking for has drifted into deep space. It might have been renamed, removed, or never existed in the first place.</p>
+                <h1 class="error-title">This page is outside of the universe</h1>
+                <p class="error-text">
+                    The page you are trying to access doesn't exist or has been moved.
+                    <span>Try going back to our homepage.</span>
+                </p>
                 
                 <div class="error-actions">
-                    <a href="/" class="btn btn-primary">
-                        Back to Homepage <i data-lucide="home" class="btn-icon" style="margin-left: 0.5rem; width: 16px; height: 16px;"></i>
-                    </a>
-                    <a href="/contact" class="btn btn-secondary">
-                        Contact Support <i data-lucide="message-square" class="btn-icon" style="margin-left: 0.5rem; width: 16px; height: 16px;"></i>
+                    <a href="/" class="btn btn-primary btn-error-home">
+                        Go to homepage
                     </a>
                 </div>
             </div>
