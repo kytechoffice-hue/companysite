@@ -77,71 +77,197 @@
             <!-- Galaxy Dust overlay -->
             <div class="error-galaxy-dust"></div>
 
-            <!-- SVG Space Illustrations -->
-            <!-- 1. Eye (Top-Left) -->
+            <!-- SVG IT/Tech Illustrations -->
+            <!-- 1. Dotted Network Globe (Top-Left) -->
             <svg viewBox="0 0 100 100" class="illust-element illust-eye" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="40" fill="#6c8ff5"/>
-                <path d="M 22 50 Q 50 25 78 50 Q 50 75 22 50 Z" fill="#ffffff"/>
-                <circle cx="50" cy="50" r="16" fill="#f87171"/>
-                <circle cx="50" cy="50" r="8" fill="#151b32"/>
-                <circle cx="46" cy="46" r="3" fill="#ffffff"/>
+                <!-- Glowing background disk -->
+                <circle cx="50" cy="50" r="45" fill="url(#globeGrad)" opacity="0.15" />
+                <defs>
+                    <radialGradient id="globeGrad" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="#06b6d4" />
+                        <stop offset="100%" stop-color="#3b82f6" stop-opacity="0" />
+                    </radialGradient>
+                </defs>
+                <!-- Outer ring -->
+                <circle cx="50" cy="50" r="40" fill="none" stroke="#3b82f6" stroke-width="1.5" opacity="0.6" stroke-dasharray="4, 4" />
+                <!-- Grid Lines -->
+                <ellipse cx="50" cy="50" rx="40" ry="16" fill="none" stroke="#6366f1" stroke-width="1.5" opacity="0.5" />
+                <ellipse cx="50" cy="50" rx="16" ry="40" fill="none" stroke="#6366f1" stroke-width="1.5" opacity="0.5" />
+                <line x1="50" y1="10" x2="50" y2="90" stroke="#6366f1" stroke-width="1" opacity="0.4" />
+                <line x1="10" y1="50" x2="90" y2="50" stroke="#6366f1" stroke-width="1" opacity="0.4" />
+                <!-- Glowing Network Nodes -->
+                <circle cx="50" cy="10" r="3" fill="#06b6d4" />
+                <circle cx="50" cy="90" r="3" fill="#06b6d4" />
+                <circle cx="10" cy="50" r="3" fill="#06b6d4" />
+                <circle cx="90" cy="50" r="3" fill="#06b6d4" />
+                <circle cx="22" cy="30" r="4" fill="#00f5c4" />
+                <circle cx="78" cy="70" r="4" fill="#00f5c4" />
+                <circle cx="22" cy="70" r="3.5" fill="#3b82f6" />
+                <circle cx="78" cy="30" r="3.5" fill="#3b82f6" />
+                <!-- Central Core -->
+                <circle cx="50" cy="50" r="8" fill="#1e1b4b" stroke="#00f5c4" stroke-width="2" />
+                <circle cx="50" cy="50" r="3" fill="#00f5c4" />
             </svg>
 
-            <!-- 2. Starburst (Mid-Left) -->
+            <!-- 2. Code Tag Hexagon (Mid-Left) -->
             <svg viewBox="0 0 100 100" class="illust-element illust-star" xmlns="http://www.w3.org/2000/svg">
-                <polygon points="50,5 58,22 75,15 72,33 89,35 79,50 89,65 72,67 75,85 58,78 50,95 42,78 25,85 28,67 11,65 21,50 11,35 28,33 25,15 42,22" fill="#f3a58e"/>
+                <!-- Hexagon border -->
+                <polygon points="50,5 90,28 90,72 50,95 10,72 10,28" fill="none" stroke="#f43f5e" stroke-width="3.5" stroke-linejoin="round" />
+                <!-- Inner soft fill -->
+                <polygon points="50,10 85,30 85,70 50,90 15,70 15,30" fill="url(#hexGrad)" opacity="0.2" />
+                <defs>
+                    <linearGradient id="hexGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#f43f5e" />
+                        <stop offset="100%" stop-color="#f59e0b" />
+                    </linearGradient>
+                </defs>
+                <!-- Code tag brackets < / > -->
+                <path d="M 36 38 L 22 50 L 36 62" fill="none" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M 64 38 L 78 50 L 64 62" fill="none" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M 56 32 L 44 68" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" />
             </svg>
 
-            <!-- 3. Scribble (Bottom-Left) -->
+            <!-- 3. Database Cloud Storage (Bottom-Left) -->
             <svg viewBox="0 0 200 100" class="illust-element illust-scribble" xmlns="http://www.w3.org/2000/svg">
-                <path d="M 20 80 C 15 50, 45 20, 50 60 C 55 90, 85 40, 90 70 C 100 95, 130 30, 135 60 C 140 85, 170 20, 180 50" fill="none" stroke="#3b82f6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                <!-- Cloud shape path -->
+                <path d="M 55 65 A 22 22 0 0 1 50 22 A 28 28 0 0 1 95 12 A 38 38 0 0 1 155 26 A 22 22 0 0 1 150 65 Z" fill="url(#cloudGrad)" opacity="0.25" />
+                <path d="M 55 65 A 22 22 0 0 1 50 22 A 28 28 0 0 1 95 12 A 38 38 0 0 1 155 26 A 22 22 0 0 1 150 65 Z" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                <defs>
+                    <linearGradient id="cloudGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#3b82f6" />
+                        <stop offset="100%" stop-color="#06b6d4" />
+                    </linearGradient>
+                </defs>
+                <!-- Database cylinder in center -->
+                <!-- Top cylinder lid -->
+                <ellipse cx="100" cy="35" rx="15" ry="6" fill="#1e1b4b" stroke="#00f5c4" stroke-width="2" />
+                <!-- Middle section -->
+                <path d="M 85 35 L 85 47 A 15 6 0 0 0 115 47 L 115 35" fill="#1e1b4b" stroke="#00f5c4" stroke-width="2" />
+                <!-- Bottom section -->
+                <path d="M 85 47 L 85 59 A 15 6 0 0 0 115 59 L 115 47" fill="#1e1b4b" stroke="#00f5c4" stroke-width="2" />
+                <!-- Server disk lights -->
+                <circle cx="95" cy="42" r="1.5" fill="#00f5c4" />
+                <circle cx="95" cy="54" r="1.5" fill="#00f5c4" />
+                <!-- Network drop pins -->
+                <line x1="68" y1="58" x2="68" y2="78" stroke="#3b82f6" stroke-width="2" stroke-dasharray="3, 3" />
+                <line x1="132" y1="58" x2="132" y2="78" stroke="#3b82f6" stroke-width="2" stroke-dasharray="3, 3" />
+                <circle cx="68" cy="78" r="3.5" fill="#3b82f6" />
+                <circle cx="132" cy="78" r="3.5" fill="#3b82f6" />
             </svg>
 
-            <!-- 4. Flower & Tongue (Top-Right) -->
+            <!-- 4. Mechanical Settings Cog (Top-Right) -->
             <svg viewBox="0 0 200 200" class="illust-element illust-flower" xmlns="http://www.w3.org/2000/svg">
-                <g fill="#3b82f6">
-                    <circle cx="100" cy="40" r="25"/>
-                    <circle cx="130" cy="52" r="25"/>
-                    <circle cx="142" cy="82" r="25"/>
-                    <circle cx="130" cy="112" r="25"/>
-                    <circle cx="100" cy="124" r="25"/>
-                    <circle cx="70" cy="112" r="25"/>
-                    <circle cx="58" cy="82" r="25"/>
-                    <circle cx="70" cy="52" r="25"/>
-                    <circle cx="100" cy="82" r="38"/>
-                </g>
-                <path d="M 65 92 A 35 35 0 0 0 135 92 Z" fill="#1e1b4b" transform="rotate(-30, 100, 82)"/>
-                <path d="M 85 92 Q 65 110 50 100 T 35 112" fill="none" stroke="#f87171" stroke-width="8" stroke-linecap="round"/>
+                <!-- Outer teeth path -->
+                <path d="M 100 20 L 110 20 L 113 38 A 62 62 0 0 1 127 44 L 140 31 L 147 38 L 138 52 A 62 62 0 0 1 148 66 L 166 63 L 169 73 L 153 84 A 62 62 0 0 1 153 100 L 169 111 L 166 121 L 148 118 A 62 62 0 0 1 138 132 L 147 146 L 140 153 L 127 140 A 62 62 0 0 1 127 140 L 113 146 L 110 164 L 100 164 L 97 146 A 62 62 0 0 1 83 140 L 70 153 L 63 146 L 72 132 A 62 62 0 0 1 62 118 L 44 121 L 41 111 L 57 100 A 62 62 0 0 1 57 84 L 41 73 L 44 63 L 62 66 A 62 62 0 0 1 72 52 L 63 38 L 70 31 L 83 44 A 62 62 0 0 1 97 38 Z" fill="url(#cogGrad)" opacity="0.3" />
+                <path d="M 100 20 L 110 20 L 113 38 A 62 62 0 0 1 127 44 L 140 31 L 147 38 L 138 52 A 62 62 0 0 1 148 66 L 166 63 L 169 73 L 153 84 A 62 62 0 0 1 153 100 L 169 111 L 166 121 L 148 118 A 62 62 0 0 1 138 132 L 147 146 L 140 153 L 127 140 A 62 62 0 0 1 113 146 L 110 164 L 100 164 L 97 146 A 62 62 0 0 1 83 140 L 70 153 L 63 146 L 72 132 A 62 62 0 0 1 62 118 L 44 121 L 41 111 L 57 100 A 62 62 0 0 1 57 84 L 41 73 L 44 63 L 62 66 A 62 62 0 0 1 72 52 L 63 38 L 70 31 L 83 44 A 62 62 0 0 1 97 38 Z" fill="none" stroke="#00f5c4" stroke-width="4" stroke-linejoin="round" />
+                <defs>
+                    <linearGradient id="cogGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#00f5c4" />
+                        <stop offset="100%" stop-color="#3b82f6" />
+                    </linearGradient>
+                </defs>
+                <!-- Inner hubs -->
+                <circle cx="100" cy="92" r="45" fill="none" stroke="#3b82f6" stroke-width="3.5" />
+                <circle cx="100" cy="92" r="22" fill="#1e1b4b" stroke="#00f5c4" stroke-width="3" />
+                <!-- Spoke lines -->
+                <line x1="100" y1="47" x2="100" y2="70" stroke="#3b82f6" stroke-width="3" />
+                <line x1="100" y1="114" x2="100" y2="137" stroke="#3b82f6" stroke-width="3" />
+                <line x1="55" y1="92" x2="78" y2="92" stroke="#3b82f6" stroke-width="3" />
+                <line x1="122" y1="92" x2="145" y2="92" stroke="#3b82f6" stroke-width="3" />
             </svg>
 
-            <!-- 5. Wave line (Mid-Right) -->
+            <!-- 5. Digital Signal Wave (Mid-Right) -->
             <svg viewBox="0 0 100 20" class="illust-element illust-wave" xmlns="http://www.w3.org/2000/svg">
-                <path d="M 5 10 Q 15 0 25 10 T 45 10 T 65 10 T 85 10" fill="none" stroke="#00f5c4" stroke-width="6" stroke-linecap="round"/>
+                <!-- Background shadow line -->
+                <path d="M 5 10 Q 15 0 25 10 T 45 10 T 65 10 T 85 10" fill="none" stroke="#312e81" stroke-width="6" stroke-linecap="round" opacity="0.4" />
+                <!-- Front glowing line -->
+                <path d="M 5 10 Q 15 0 25 10 T 45 10 T 65 10 T 85 10" fill="none" stroke="#00f5c4" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+                <!-- Tech pulse circles on peaks -->
+                <circle cx="15" cy="5" r="2.5" fill="#ffffff" />
+                <circle cx="55" cy="5" r="2.5" fill="#ffffff" />
+                <circle cx="35" cy="15" r="2.5" fill="#3b82f6" />
+                <circle cx="75" cy="15" r="2.5" fill="#3b82f6" />
             </svg>
 
-            <!-- 6. 3D Steps (Bottom-Right) -->
+            <!-- 6. 3D Isometric Server Stack (Bottom-Right) -->
             <svg viewBox="0 0 300 200" class="illust-element illust-steps" xmlns="http://www.w3.org/2000/svg">
-                <!-- Step 1 (Bottom) -->
-                <polygon points="60,170 130,170 100,150 30,150" fill="#fffdeb"/>
-                <polygon points="30,150 60,170 60,200 30,200" fill="#312e81"/>
-                <polygon points="60,170 130,170 130,200 60,200" fill="#1e1b4b"/>
-                
-                <!-- Step 2 (Middle) -->
-                <polygon points="130,140 200,140 170,120 100,120" fill="#fffdeb"/>
-                <polygon points="100,120 130,140 130,200 100,200" fill="#312e81"/>
-                <polygon points="130,140 200,140 200,200 130,200" fill="#1e1b4b"/>
-                
-                <!-- Step 3 (Top) -->
-                <polygon points="200,110 270,110 240,90 170,90" fill="#fffdeb"/>
-                <polygon points="170,90 200,110 200,200 170,200" fill="#312e81"/>
-                <polygon points="200,110 270,110 270,200 200,200" fill="#1e1b4b"/>
+                <!-- Server 1 (Back-Left) -->
+                <g class="server-tower">
+                    <!-- Top metal face -->
+                    <polygon points="40,100 85,85 130,100 85,115" fill="#818cf8" opacity="0.85" />
+                    <!-- Left metal face (shadowed) -->
+                    <polygon points="40,100 85,115 85,190 40,175" fill="#312e81" />
+                    <!-- Front control panel face -->
+                    <polygon points="85,115 130,100 130,175 85,190" fill="#1e293b" />
+                    <!-- Slots & LEDs -->
+                    <polygon points="89,122 126,110 126,120 89,132" fill="#0f172a" />
+                    <polygon points="89,136 126,124 126,134 89,146" fill="#0f172a" />
+                    <polygon points="89,150 126,138 126,148 89,160" fill="#0f172a" />
+                    <polygon points="89,164 126,152 126,162 89,174" fill="#0f172a" />
+                    
+                    <circle cx="94" cy="125" r="2" fill="#00f5c4" />
+                    <circle cx="94" cy="139" r="2" fill="#00f5c4" />
+                    <circle cx="94" cy="153" r="2" fill="#10b981" />
+                    <circle cx="94" cy="167" r="2" fill="#3b82f6" />
+                </g>
+
+                <!-- Server 2 (Middle) -->
+                <g class="server-tower">
+                    <!-- Top metal face -->
+                    <polygon points="115,100 160,85 205,100 160,115" fill="#818cf8" opacity="0.9" />
+                    <!-- Left metal face (shadowed) -->
+                    <polygon points="115,100 160,115 160,190 115,175" fill="#312e81" />
+                    <!-- Front control panel face -->
+                    <polygon points="160,115 205,100 205,175 160,190" fill="#1e293b" />
+                    <!-- Slots & LEDs -->
+                    <polygon points="164,122 201,110 201,120 164,132" fill="#0f172a" />
+                    <polygon points="164,136 201,124 201,134 164,146" fill="#0f172a" />
+                    <polygon points="164,150 201,138 201,148 164,160" fill="#0f172a" />
+                    <polygon points="164,164 201,152 201,162 164,174" fill="#0f172a" />
+                    
+                    <circle cx="169" cy="125" r="2" fill="#00f5c4" />
+                    <circle cx="169" cy="139" r="2" fill="#00f5c4" />
+                    <circle cx="169" cy="153" r="2" fill="#10b981" />
+                    <circle cx="169" cy="167" r="2" fill="#3b82f6" />
+                </g>
+
+                <!-- Server 3 (Front-Right) -->
+                <g class="server-tower">
+                    <!-- Top metal face -->
+                    <polygon points="190,100 235,85 280,100 235,115" fill="#818cf8" opacity="0.95" />
+                    <!-- Left metal face (shadowed) -->
+                    <polygon points="190,100 235,115 235,190 190,175" fill="#312e81" />
+                    <!-- Front control panel face -->
+                    <polygon points="235,115 280,100 280,175 235,190" fill="#1e293b" />
+                    <!-- Slots & LEDs -->
+                    <polygon points="239,122 276,110 276,120 239,132" fill="#0f172a" />
+                    <polygon points="239,136 276,124 276,134 239,146" fill="#0f172a" />
+                    <polygon points="239,150 276,138 276,148 239,160" fill="#0f172a" />
+                    <polygon points="239,164 276,152 276,162 239,174" fill="#0f172a" />
+                    
+                    <circle cx="244" cy="125" r="2" fill="#00f5c4" />
+                    <circle cx="244" cy="139" r="2" fill="#00f5c4" />
+                    <circle cx="244" cy="153" r="2" fill="#10b981" />
+                    <circle cx="244" cy="167" r="2" fill="#3b82f6" />
+                </g>
             </svg>
 
-            <!-- 7. Left Block (Bottom-Left) -->
+            <!-- 7. Single 3D Server Node (Bottom-Left) -->
             <svg viewBox="0 0 150 200" class="illust-element" style="bottom: 0; left: 15%; width: 150px; height: 200px; z-index: 3;" xmlns="http://www.w3.org/2000/svg">
-                <polygon points="80,180 130,180 110,165 60,165" fill="#fffdeb"/>
-                <polygon points="60,165 80,180 80,200 60,200" fill="#312e81"/>
-                <polygon points="80,180 130,180 130,200 80,200" fill="#1e1b4b"/>
+                <!-- Top metal face -->
+                <polygon points="20,120 65,105 110,120 65,135" fill="#818cf8" opacity="0.9" />
+                <!-- Left metal face (shadowed) -->
+                <polygon points="20,120 65,135 65,190 20,175" fill="#312e81" />
+                <!-- Front panel -->
+                <polygon points="65,135 110,120 110,175 65,190" fill="#1e293b" />
+                <!-- Slots & LEDs -->
+                <polygon points="69,141 106,129 106,138 69,150" fill="#0f172a" />
+                <polygon points="69,154 106,142 106,151 69,163" fill="#0f172a" />
+                <polygon points="69,167 106,155 106,164 69,176" fill="#0f172a" />
+                
+                <circle cx="74" cy="144" r="2.5" fill="#00f5c4" />
+                <circle cx="74" cy="157" r="2.5" fill="#00f5c4" />
+                <circle cx="74" cy="170" r="2.5" fill="#f43f5e" />
             </svg>
 
             <!-- Main Content Container -->
