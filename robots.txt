@@ -1,4 +1,7 @@
 User-agent: * 
 Allow: / 
 
+# Disallow dynamic search query parameters to avoid duplicate content indexing
+Disallow: /*?*
+
 Sitemap: https://kytechserv.com/sitemap.xml
