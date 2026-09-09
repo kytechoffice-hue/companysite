@@ -59,7 +59,7 @@
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>#home" class="nav-link active">Home</a>
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>#about" class="nav-link">About Us</a>
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>#services" class="nav-link">Services</a>
-                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>#products" class="nav-link">Products</a>
+                    <a href="<?php echo esc_url( home_url( '/achievements' ) ); ?>" class="nav-link">Our Achievements</a>
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>#contact" class="nav-link">Contact Us</a>
                     <?php
                 }

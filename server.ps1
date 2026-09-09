@@ -48,6 +48,13 @@ while ($listener.IsListening) {
         
         # Decode URL path
         $path = [System.Uri]::UnescapeDataString($path)
+
+        # Redirect /products to /achievements
+        if ($path -eq "/products" -or $path -eq "/products.html") {
+            $response.Redirect("/achievements")
+            $response.Close()
+            continue
+        }
         
         # Translate to local path
         $localPath = Join-Path $PSScriptRoot $path.TrimStart('/')
@@ -78,7 +85,9 @@ while ($listener.IsListening) {
             
             $bytes = [System.IO.File]::ReadAllBytes($localPath)
             $response.ContentLength64 = $bytes.Length
-            $response.OutputStream.Write($bytes, 0, $bytes.Length)
+            if ($request.HttpMethod -ne "HEAD") {
+                $response.OutputStream.Write($bytes, 0, $bytes.Length)
+            }
         } else {
             # Fallback to custom 404.html
             $response.StatusCode = 404
@@ -89,11 +98,15 @@ while ($listener.IsListening) {
             if (Test-Path $errPagePath -PathType Leaf) {
                 $bytes = [System.IO.File]::ReadAllBytes($errPagePath)
                 $response.ContentLength64 = $bytes.Length
-                $response.OutputStream.Write($bytes, 0, $bytes.Length)
+                if ($request.HttpMethod -ne "HEAD") {
+                    $response.OutputStream.Write($bytes, 0, $bytes.Length)
+                }
             } else {
                 $bytes = [System.Text.Encoding]::UTF8.GetBytes("404 - File Not Found")
                 $response.ContentLength64 = $bytes.Length
-                $response.OutputStream.Write($bytes, 0, $bytes.Length)
+                if ($request.HttpMethod -ne "HEAD") {
+                    $response.OutputStream.Write($bytes, 0, $bytes.Length)
+                }
             }
         }
         

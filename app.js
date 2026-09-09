@@ -644,6 +644,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // ==========================================================================
+    // FAQ ACCORDION INTERACTION
+    // ==========================================================================
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        if (question) {
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                faqItems.forEach(other => other.classList.remove('active'));
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        }
+    });
+
     // Helper to store in localStorage
     function saveSubmission(data) {
         let items = JSON.parse(localStorage.getItem('ky_submissions') || '[]');

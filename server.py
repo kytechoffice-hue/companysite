@@ -10,6 +10,13 @@ class CustomHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
         parsed_url = urllib.parse.urlparse(self.path)
         path = parsed_url.path
         
+        # Redirect /products to /achievements
+        if path == '/products' or path == '/products.html':
+            self.send_response(301)
+            self.send_header('Location', '/achievements')
+            self.end_headers()
+            return
+        
         # Translate to local path
         local_path = self.translate_path(path)
         
