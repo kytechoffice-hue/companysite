@@ -44,7 +44,27 @@
             <!-- Menu items -->
             <nav class="nav-menu" id="nav-links">
                 <a href="#home" class="nav-link active">Home</a>
-                <a href="services.html" class="nav-link">Services</a>
+                <div class="nav-item-dropdown">
+                    <a href="services.html" class="nav-link nav-dropdown-toggle">
+                        Services <i data-lucide="chevron-down" class="dropdown-chevron"></i>
+                    </a>
+                    <div class="nav-submenu">
+                        <a href="#quick-services" class="submenu-link">
+                            <div class="submenu-icon"><i data-lucide="zap"></i></div>
+                            <div class="submenu-text">
+                                <span class="submenu-title">Quick Services</span>
+                                <span class="submenu-sub">Design, Resumes &amp; Data Entry</span>
+                            </div>
+                        </a>
+                        <a href="services.html" class="submenu-link">
+                            <div class="submenu-icon"><i data-lucide="layers"></i></div>
+                            <div class="submenu-text">
+                                <span class="submenu-title">Medium Services</span>
+                                <span class="submenu-sub">Websites, Apps &amp; Branding</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
                 <a href="#why-us" class="nav-link">Why Us</a>
                 <a href="#how-it-works" class="nav-link">How It Works</a>
                 <a href="#faq" class="nav-link">FAQ</a>

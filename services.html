@@ -45,7 +45,27 @@
             <nav class="nav-menu" id="nav-links">
                 <a href="/" class="nav-link">Home</a>
                 <a href="/about" class="nav-link">About Us</a>
-                <a href="/services" class="nav-link active">Services</a>
+                <div class="nav-item-dropdown">
+                    <a href="/services" class="nav-link active nav-dropdown-toggle">
+                        Services <i data-lucide="chevron-down" class="dropdown-chevron"></i>
+                    </a>
+                    <div class="nav-submenu">
+                        <a href="/#quick-services" class="submenu-link">
+                            <div class="submenu-icon"><i data-lucide="zap"></i></div>
+                            <div class="submenu-text">
+                                <span class="submenu-title">Quick Services</span>
+                                <span class="submenu-sub">Design, Resumes &amp; Data Entry</span>
+                            </div>
+                        </a>
+                        <a href="/services" class="submenu-link">
+                            <div class="submenu-icon"><i data-lucide="layers"></i></div>
+                            <div class="submenu-text">
+                                <span class="submenu-title">Medium Services</span>
+                                <span class="submenu-sub">Websites, Apps &amp; Branding</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
                 <a href="/achievements" class="nav-link">Our Achievements</a>
                 <a href="/contact" class="nav-link">Contact Us</a>
             </nav>
