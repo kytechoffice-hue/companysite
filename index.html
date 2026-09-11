@@ -44,8 +44,9 @@
             <!-- Menu items -->
             <nav class="nav-menu" id="nav-links">
                 <a href="#home" class="nav-link active">Home</a>
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="#quick-services" class="nav-link">Quick Services</a>
+                <a href="#why-us" class="nav-link">Why Us</a>
                 <a href="#how-it-works" class="nav-link">How It Works</a>
                 <a href="#faq" class="nav-link">FAQ</a>
                 <a href="#contact" class="nav-link">Contact</a>
@@ -77,92 +78,79 @@
     <main>
 
         <!-- 2. HERO SECTION -->
-        <section class="hero" id="home" style="min-height: 85vh; padding-top: 8rem; padding-bottom: 5rem; display: flex; align-items: center;">
-            <div class="container" style="text-align: center; max-width: 960px; margin: 0 auto;">
-                
-                <!-- Instant Homepage Offer Card -->
-                <div class="hero-offer-card glass-card" id="special-offer">
-                    <div class="offer-badge-pill">
-                        <span class="offer-badge-dot"></span>
-                        <span>EXCLUSIVE OFFER</span>
+        <section class="hero hero-banner-section" id="home">
+            <div class="container">
+                <div class="hero-banner-content">
+                    
+                    <!-- Service Tag Pill -->
+                    <div class="hero-service-pill">
+                        <span class="hero-pill-dot"></span>
+                        <span>All-in-One Digital Services</span>
                     </div>
 
-                    <h2 class="offer-headline">
-                        <strong>“Need a Website, Resume or Online Document Work?”</strong>
-                    </h2>
+                    <!-- Main Headline -->
+                    <h1 class="hero-banner-title">
+                        Fast, Scalable &amp; Modern <span class="text-glow">Digital Services</span>
+                    </h1>
 
-                    <div class="offer-price-tag">
-                        Starting from <span>₹99</span>
-                    </div>
+                    <!-- Subheading / Value Proposition -->
+                    <p class="hero-banner-desc">
+                        Helping individuals, startups, and businesses thrive online. From quick document formatting and ATS resumes to high-performance websites and custom software.
+                    </p>
 
-                    <div class="offer-cta-wrapper">
-                        <a href="https://wa.me/919137822376?text=Hello%20KY%20Tech%20Services%2C%20I%20saw%20your%20offer%3A%20Need%20a%20Website%2C%20Resume%20or%20Online%20Document%20Work%20starting%20from%20%E2%82%B999.%20I%20want%20to%20place%20an%20order." target="_blank" rel="noopener" class="btn btn-whatsapp offer-wa-btn" id="offer-whatsapp-btn">
-                            👉 Order on WhatsApp
+                    <!-- 3 Service Level Hierarchy Cards -->
+                    <div class="hero-tiers-row">
+                        <a href="#quick-services" class="hero-tier-card">
+                            <span class="tier-tag">Quick Services</span>
+                            <span class="tier-name">Design &amp; Documents</span>
+                            <span class="tier-price">Starting ₹99</span>
+                        </a>
+                        <a href="#website-services" class="hero-tier-card">
+                            <span class="tier-tag">Medium Services</span>
+                            <span class="tier-name">Websites &amp; Branding</span>
+                            <span class="tier-price">Starting ₹999</span>
+                        </a>
+                        <a href="#services" class="hero-tier-card">
+                            <span class="tier-tag">High-Scale</span>
+                            <span class="tier-name">Apps &amp; Custom Software</span>
+                            <span class="tier-price">Scalable Growth</span>
                         </a>
                     </div>
 
-                    <!-- Process Workflow: Website → WhatsApp → Order → Payment → Work → Delivery -->
-                    <div class="offer-workflow">
-                        <span class="workflow-title">Simple &amp; Fast Process</span>
-                        <div class="workflow-steps">
-                            <span class="step-pill"><i data-lucide="globe"></i> Website</span>
-                            <span class="step-arrow">→</span>
-                            <span class="step-pill"><i data-lucide="message-circle"></i> WhatsApp</span>
-                            <span class="step-arrow">→</span>
-                            <span class="step-pill"><i data-lucide="shopping-bag"></i> Order</span>
-                            <span class="step-arrow">→</span>
-                            <span class="step-pill"><i data-lucide="credit-card"></i> Payment</span>
-                            <span class="step-arrow">→</span>
-                            <span class="step-pill"><i data-lucide="layers"></i> Work</span>
-                            <span class="step-arrow">→</span>
-                            <span class="step-pill"><i data-lucide="check-circle"></i> Delivery</span>
-                        </div>
+                    <!-- Hero Call to Actions -->
+                    <div class="hero-banner-ctas">
+                        <a href="https://wa.me/919137822376?text=Hello%20KY%20Tech%20Services%2C%20I%20would%20like%20to%20enquire%20about%20your%20Digital%20Services.%20My%20requirement%20is%3A%20" target="_blank" rel="noopener" class="btn btn-whatsapp" style="padding: 1rem 2rem; font-size: 1.05rem;">
+                            <i data-lucide="message-circle" style="width: 20px; height: 20px;"></i> Enquire on WhatsApp
+                        </a>
+                        <a href="#services" class="btn btn-glass" style="padding: 1rem 2rem; font-size: 1.05rem;">
+                            Explore All Services <i data-lucide="arrow-right" class="btn-icon"></i>
+                        </a>
                     </div>
+
+                    <!-- Trust Badges -->
+                    <div class="hero-trust-row">
+                        <span class="hero-trust-item">
+                            <i data-lucide="zap"></i> Quick Response
+                        </span>
+                        <span class="hero-trust-item">
+                            <i data-lucide="tag"></i> Transparent Pricing
+                        </span>
+                        <span class="hero-trust-item">
+                            <i data-lucide="globe"></i> 100% Online Service
+                        </span>
+                        <span class="hero-trust-item">
+                            <i data-lucide="smile"></i> Marathi &amp; English Support
+                        </span>
+                    </div>
+
                 </div>
-
-                <!-- Main Heading -->
-                <h1 class="hero-title" style="font-size: 3.6rem; line-height: 1.15; margin-bottom: 1.5rem;">
-                    Fast &amp; Reliable <span>Digital Services</span> for Your Online Needs
-                </h1>
-
-                <!-- Subheading -->
-                <p class="hero-desc" style="max-width: 780px; margin: 0 auto 2.5rem auto; font-size: 1.25rem; line-height: 1.7;">
-                    Website, Business Setup, WhatsApp, Digital Documents, and Online Support — All Services in One Place.
-                </p>
-
-                <!-- Hero CTAs -->
-                <div style="display: flex; gap: 1.25rem; justify-content: center; align-items: center; flex-wrap: wrap;">
-                    <a href="https://wa.me/919137822376?text=Hello%20KY%20Tech%20Services%2C%20I%20would%20like%20to%20enquire%20about%20your%20Digital%20Services.%20My%20requirement%20is%3A%20" target="_blank" rel="noopener" class="btn btn-whatsapp" style="padding: 1rem 2rem; font-size: 1.05rem;">
-                        <i data-lucide="message-circle" style="width: 20px; height: 20px;"></i> Enquire on WhatsApp
-                    </a>
-                    <a href="#services" class="btn btn-secondary" style="padding: 1rem 2rem; font-size: 1.05rem;">
-                        View All Services <i data-lucide="arrow-right" class="btn-icon"></i>
-                    </a>
-                </div>
-
-                <!-- Trust Badges -->
-                <div class="trust-badges-row">
-                    <div class="trust-badge-pill">
-                        <i data-lucide="zap" style="width: 14px; height: 14px;"></i> Quick Response
-                    </div>
-                    <div class="trust-badge-pill">
-                        <i data-lucide="tag" style="width: 14px; height: 14px;"></i> Transparent Pricing
-                    </div>
-                    <div class="trust-badge-pill">
-                        <i data-lucide="globe" style="width: 14px; height: 14px;"></i> Online Service
-                    </div>
-                    <div class="trust-badge-pill">
-                        <i data-lucide="smile" style="width: 14px; height: 14px;"></i> Marathi Support
-                    </div>
-                </div>
-
             </div>
         </section>
 
         <!-- 3. QUICK SERVICES (Starting From ₹99) -->
-        <section class="quick-services-section" id="quick-services" style="padding: 5rem 0; background: hsla(var(--bg-secondary-raw), 0.4);">
+        <section class="quick-services-section" id="quick-services" style="padding: 3.5rem 0 1.5rem 0; background: hsla(var(--bg-secondary-raw), 0.4);">
             <div class="container">
-                <div style="text-align: center; max-width: 750px; margin: 0 auto 3.5rem auto;">
+                <div style="text-align: center; max-width: 750px; margin: 0 auto 2rem auto;">
                     <div class="section-tag">
                         <span class="dot"></span> Affordable Digital Help
                     </div>
@@ -172,266 +160,460 @@
                     </p>
                 </div>
 
-                <div class="quick-services-grid">
-                    <!-- Card 1: PDF & Document Services -->
-                    <div class="quick-service-card glass-card">
-                        <div>
-                            <div class="quick-service-icon">
-                                <i data-lucide="file-text"></i>
+                <!-- Single Service Content Banners (No Price, No Category) -->
+                <div class="service-banners-grid">
+                    
+                    <!-- 1. Banner Design -->
+                    <div class="service-banner-card">
+                        <div class="service-banner-header">
+                            <div class="service-banner-icon">
+                                <i data-lucide="image"></i>
                             </div>
-                            <h3 class="quick-service-title">PDF &amp; Document Services</h3>
-                            <p class="quick-service-desc">PDF Merge • Split • Convert • Formatting with high accuracy.</p>
                         </div>
-                        <div>
-                            <div class="quick-service-price">Starting ₹99</div>
-                            <a href="https://wa.me/919137822376?text=Hello%20KY%20Tech%2C%20I%20need%20PDF%20%26%20Document%20Services%20(Starting%20%E2%82%B999).%20My%20requirement%3A%20" target="_blank" rel="noopener" class="btn btn-whatsapp-outline" style="width: 100%; justify-content: center; padding: 0.65rem 1rem; font-size: 0.9rem;">
-                                <i data-lucide="message-circle" style="width: 16px; height: 16px;"></i> Chat on WhatsApp
+                        <div class="service-banner-body">
+                            <h3 class="service-banner-name">Banner Design</h3>
+                            <p class="service-banner-text">High-impact promotional, web and social media banner designs.</p>
+                        </div>
+                        <div class="service-banner-footer">
+                            <a href="https://wa.me/919137822376?text=Hello%20KY%20Tech%2C%20I%20want%20to%20order%20Banner%20Design.%20Details%3A%20" target="_blank" rel="noopener" class="service-banner-btn">
+                                <i data-lucide="message-circle"></i> Chat on WhatsApp
                             </a>
                         </div>
                     </div>
 
-                    <!-- Card 2: Online Form Assistance -->
-                    <div class="quick-service-card glass-card">
-                        <div>
-                            <div class="quick-service-icon">
-                                <i data-lucide="clipboard-list"></i>
+                    <!-- 2. Logo Design -->
+                    <div class="service-banner-card">
+                        <div class="service-banner-header">
+                            <div class="service-banner-icon">
+                                <i data-lucide="award"></i>
                             </div>
-                            <h3 class="quick-service-title">Online Form Assistance</h3>
-                            <p class="quick-service-desc">Online form filling and basic application assistance with step-by-step guidance.</p>
                         </div>
-                        <div>
-                            <div class="quick-service-price">Starting ₹99</div>
-                            <a href="https://wa.me/919137822376?text=Hello%20KY%20Tech%2C%20I%20need%20Online%20Form%20Assistance%20(Starting%20%E2%82%B999).%20My%20details%3A%20" target="_blank" rel="noopener" class="btn btn-whatsapp-outline" style="width: 100%; justify-content: center; padding: 0.65rem 1rem; font-size: 0.9rem;">
-                                <i data-lucide="message-circle" style="width: 16px; height: 16px;"></i> Start Now
+                        <div class="service-banner-body">
+                            <h3 class="service-banner-name">Logo Design</h3>
+                            <p class="service-banner-text">Custom vector logo concepts with full branding identity.</p>
+                        </div>
+                        <div class="service-banner-footer">
+                            <a href="https://wa.me/919137822376?text=Hello%20KY%20Tech%2C%20I%20want%20to%20order%20Logo%20Design.%20Details%3A%20" target="_blank" rel="noopener" class="service-banner-btn">
+                                <i data-lucide="message-circle"></i> Chat on WhatsApp
                             </a>
                         </div>
                     </div>
 
-                    <!-- Card 3: Resume / CV -->
-                    <div class="quick-service-card glass-card">
-                        <div>
-                            <div class="quick-service-icon">
+                    <!-- 3. Visiting Card Design -->
+                    <div class="service-banner-card">
+                        <div class="service-banner-header">
+                            <div class="service-banner-icon">
+                                <i data-lucide="credit-card"></i>
+                            </div>
+                        </div>
+                        <div class="service-banner-body">
+                            <h3 class="service-banner-name">Visiting Card Design</h3>
+                            <p class="service-banner-text">Print-ready, elegant business and visiting card layouts.</p>
+                        </div>
+                        <div class="service-banner-footer">
+                            <a href="https://wa.me/919137822376?text=Hello%20KY%20Tech%2C%20I%20want%20to%20order%20Visiting%20Card%20Design.%20Details%3A%20" target="_blank" rel="noopener" class="service-banner-btn">
+                                <i data-lucide="message-circle"></i> Chat on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 4. WhatsApp DP Design -->
+                    <div class="service-banner-card">
+                        <div class="service-banner-header">
+                            <div class="service-banner-icon">
                                 <i data-lucide="user-check"></i>
                             </div>
-                            <h3 class="quick-service-title">Resume / CV</h3>
-                            <p class="quick-service-desc">Get a professional Resume / CV created for your career needs with ATS-ready designs.</p>
                         </div>
-                        <div>
-                            <div class="quick-service-price">Starting ₹199</div>
-                            <a href="https://wa.me/919137822376?text=Hello%20KY%20Tech%2C%20I%20want%20to%20create%20a%20Resume%20%2F%20CV%20(Starting%20%E2%82%B9199).%20Details%3A%20" target="_blank" rel="noopener" class="btn btn-whatsapp-outline" style="width: 100%; justify-content: center; padding: 0.65rem 1rem; font-size: 0.9rem;">
-                                <i data-lucide="message-circle" style="width: 16px; height: 16px;"></i> Create Resume
+                        <div class="service-banner-body">
+                            <h3 class="service-banner-name">WhatsApp DP Design</h3>
+                            <p class="service-banner-text">Crisp circular profile avatars and business status badges.</p>
+                        </div>
+                        <div class="service-banner-footer">
+                            <a href="https://wa.me/919137822376?text=Hello%20KY%20Tech%2C%20I%20want%20to%20order%20WhatsApp%20DP%20Design.%20Details%3A%20" target="_blank" rel="noopener" class="service-banner-btn">
+                                <i data-lucide="message-circle"></i> Chat on WhatsApp
                             </a>
                         </div>
                     </div>
 
-                    <!-- Card 4: Basic Design -->
-                    <div class="quick-service-card glass-card">
-                        <div>
-                            <div class="quick-service-icon">
-                                <i data-lucide="palette"></i>
+                    <!-- 5. Social Media Post Design -->
+                    <div class="service-banner-card">
+                        <div class="service-banner-header">
+                            <div class="service-banner-icon">
+                                <i data-lucide="share-2"></i>
                             </div>
-                            <h3 class="quick-service-title">Basic Design</h3>
-                            <p class="quick-service-desc">Eye-catching Poster • Visiting Card • Digital Card customized for your brand.</p>
                         </div>
-                        <div>
-                            <div class="quick-service-price">Starting ₹199</div>
-                            <a href="https://wa.me/919137822376?text=Hello%20KY%20Tech%2C%20I%20need%20Basic%20Design%20services%20(Starting%20%E2%82%B9199).%20My%20requirement%3A%20" target="_blank" rel="noopener" class="btn btn-whatsapp-outline" style="width: 100%; justify-content: center; padding: 0.65rem 1rem; font-size: 0.9rem;">
-                                <i data-lucide="message-circle" style="width: 16px; height: 16px;"></i> Order Now
+                        <div class="service-banner-body">
+                            <h3 class="service-banner-name">Social Media Post Design</h3>
+                            <p class="service-banner-text">Creative posts tailored for Instagram, Facebook, and LinkedIn.</p>
+                        </div>
+                        <div class="service-banner-footer">
+                            <a href="https://wa.me/919137822376?text=Hello%20KY%20Tech%2C%20I%20want%20to%20order%20Social%20Media%20Post%20Design.%20Details%3A%20" target="_blank" rel="noopener" class="service-banner-btn">
+                                <i data-lucide="message-circle"></i> Chat on WhatsApp
                             </a>
                         </div>
                     </div>
+
+                    <!-- 6. Advertisement Creative -->
+                    <div class="service-banner-card">
+                        <div class="service-banner-header">
+                            <div class="service-banner-icon">
+                                <i data-lucide="sparkles"></i>
+                            </div>
+                        </div>
+                        <div class="service-banner-body">
+                            <h3 class="service-banner-name">Advertisement Creative</h3>
+                            <p class="service-banner-text">High-converting graphic creatives for paid ads and campaigns.</p>
+                        </div>
+                        <div class="service-banner-footer">
+                            <a href="https://wa.me/919137822376?text=Hello%20KY%20Tech%2C%20I%20want%20to%20order%20Advertisement%20Creative.%20Details%3A%20" target="_blank" rel="noopener" class="service-banner-btn">
+                                <i data-lucide="message-circle"></i> Chat on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 7. Blog Writing -->
+                    <div class="service-banner-card">
+                        <div class="service-banner-header">
+                            <div class="service-banner-icon">
+                                <i data-lucide="file-text"></i>
+                            </div>
+                        </div>
+                        <div class="service-banner-body">
+                            <h3 class="service-banner-name">Blog Writing</h3>
+                            <p class="service-banner-text">SEO-friendly, well-researched articles that boost your ranking.</p>
+                        </div>
+                        <div class="service-banner-footer">
+                            <a href="https://wa.me/919137822376?text=Hello%20KY%20Tech%2C%20I%20need%20Blog%20Writing%20service.%20Details%3A%20" target="_blank" rel="noopener" class="service-banner-btn">
+                                <i data-lucide="message-circle"></i> Chat on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 8. Advertisement Writing -->
+                    <div class="service-banner-card">
+                        <div class="service-banner-header">
+                            <div class="service-banner-icon">
+                                <i data-lucide="megaphone"></i>
+                            </div>
+                        </div>
+                        <div class="service-banner-body">
+                            <h3 class="service-banner-name">Advertisement Writing</h3>
+                            <p class="service-banner-text">Compelling ad copy, headlines, and call-to-actions that convert.</p>
+                        </div>
+                        <div class="service-banner-footer">
+                            <a href="https://wa.me/919137822376?text=Hello%20KY%20Tech%2C%20I%20need%20Advertisement%20Writing.%20Details%3A%20" target="_blank" rel="noopener" class="service-banner-btn">
+                                <i data-lucide="message-circle"></i> Chat on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 9. Social Media Content Writing -->
+                    <div class="service-banner-card">
+                        <div class="service-banner-header">
+                            <div class="service-banner-icon">
+                                <i data-lucide="message-square"></i>
+                            </div>
+                        </div>
+                        <div class="service-banner-body">
+                            <h3 class="service-banner-name">Social Media Content Writing</h3>
+                            <p class="service-banner-text">Engaging captions, trending hashtags, and audience-hooking copies.</p>
+                        </div>
+                        <div class="service-banner-footer">
+                            <a href="https://wa.me/919137822376?text=Hello%20KY%20Tech%2C%20I%20need%20Social%20Media%20Content%20Writing.%20Details%3A%20" target="_blank" rel="noopener" class="service-banner-btn">
+                                <i data-lucide="message-circle"></i> Chat on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 10. Marathi ↔ English Translation -->
+                    <div class="service-banner-card">
+                        <div class="service-banner-header">
+                            <div class="service-banner-icon">
+                                <i data-lucide="languages"></i>
+                            </div>
+                        </div>
+                        <div class="service-banner-body">
+                            <h3 class="service-banner-name">Marathi ↔ English Translation</h3>
+                            <p class="service-banner-text">Fluent and culturally accurate translation between Marathi and English.</p>
+                        </div>
+                        <div class="service-banner-footer">
+                            <a href="https://wa.me/919137822376?text=Hello%20KY%20Tech%2C%20I%20need%20Marathi%20to%20English%20Translation.%20Details%3A%20" target="_blank" rel="noopener" class="service-banner-btn">
+                                <i data-lucide="message-circle"></i> Chat on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 11. Other Language Translation -->
+                    <div class="service-banner-card">
+                        <div class="service-banner-header">
+                            <div class="service-banner-icon">
+                                <i data-lucide="globe"></i>
+                            </div>
+                        </div>
+                        <div class="service-banner-body">
+                            <h3 class="service-banner-name">Other Language Translation</h3>
+                            <p class="service-banner-text">Professional multi-language translation for documents and web.</p>
+                        </div>
+                        <div class="service-banner-footer">
+                            <a href="https://wa.me/919137822376?text=Hello%20KY%20Tech%2C%20I%20need%20Language%20Translation%20service.%20Details%3A%20" target="_blank" rel="noopener" class="service-banner-btn">
+                                <i data-lucide="message-circle"></i> Chat on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 12. Banner/Post Text Translation -->
+                    <div class="service-banner-card">
+                        <div class="service-banner-header">
+                            <div class="service-banner-icon">
+                                <i data-lucide="type"></i>
+                            </div>
+                        </div>
+                        <div class="service-banner-body">
+                            <h3 class="service-banner-name">Banner/Post Text Translation</h3>
+                            <p class="service-banner-text">Concise, catchy multilingual headlines for promotional creatives.</p>
+                        </div>
+                        <div class="service-banner-footer">
+                            <a href="https://wa.me/919137822376?text=Hello%20KY%20Tech%2C%20I%20need%20Banner%2FPost%20Text%20Translation.%20Details%3A%20" target="_blank" rel="noopener" class="service-banner-btn">
+                                <i data-lucide="message-circle"></i> Chat on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 13. Professional Resume Creation -->
+                    <div class="service-banner-card">
+                        <div class="service-banner-header">
+                            <div class="service-banner-icon">
+                                <i data-lucide="file-badge"></i>
+                            </div>
+                        </div>
+                        <div class="service-banner-body">
+                            <h3 class="service-banner-name">Professional Resume Creation</h3>
+                            <p class="service-banner-text">Modern, ATS-optimized resumes crafted to win interviews.</p>
+                        </div>
+                        <div class="service-banner-footer">
+                            <a href="https://wa.me/919137822376?text=Hello%20KY%20Tech%2C%20I%20want%20to%20create%20a%20Professional%20Resume.%20Details%3A%20" target="_blank" rel="noopener" class="service-banner-btn">
+                                <i data-lucide="message-circle"></i> Chat on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 14. Online Application & Form Assistance -->
+                    <div class="service-banner-card">
+                        <div class="service-banner-header">
+                            <div class="service-banner-icon">
+                                <i data-lucide="clipboard-check"></i>
+                            </div>
+                        </div>
+                        <div class="service-banner-body">
+                            <h3 class="service-banner-name">Online Application &amp; Form Assistance</h3>
+                            <p class="service-banner-text">Error-free submission for exams, government schemes &amp; portals.</p>
+                        </div>
+                        <div class="service-banner-footer">
+                            <a href="https://wa.me/919137822376?text=Hello%20KY%20Tech%2C%20I%20need%20Online%20Application%20%26%20Form%20Assistance.%20Details%3A%20" target="_blank" rel="noopener" class="service-banner-btn">
+                                <i data-lucide="message-circle"></i> Chat on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 15. Document Formatting -->
+                    <div class="service-banner-card">
+                        <div class="service-banner-header">
+                            <div class="service-banner-icon">
+                                <i data-lucide="align-left"></i>
+                            </div>
+                        </div>
+                        <div class="service-banner-body">
+                            <h3 class="service-banner-name">Document Formatting</h3>
+                            <p class="service-banner-text">Polished layout styling, fonts, tables, margins &amp; headers.</p>
+                        </div>
+                        <div class="service-banner-footer">
+                            <a href="https://wa.me/919137822376?text=Hello%20KY%20Tech%2C%20I%20need%20Document%20Formatting%20assistance.%20Details%3A%20" target="_blank" rel="noopener" class="service-banner-btn">
+                                <i data-lucide="message-circle"></i> Chat on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 16. Excel Data Entry -->
+                    <div class="service-banner-card">
+                        <div class="service-banner-header">
+                            <div class="service-banner-icon">
+                                <i data-lucide="table"></i>
+                            </div>
+                        </div>
+                        <div class="service-banner-body">
+                            <h3 class="service-banner-name">Excel Data Entry</h3>
+                            <p class="service-banner-text">Fast, accurate spreadsheet data compilation and entry.</p>
+                        </div>
+                        <div class="service-banner-footer">
+                            <a href="https://wa.me/919137822376?text=Hello%20KY%20Tech%2C%20I%20need%20Excel%20Data%20Entry.%20Details%3A%20" target="_blank" rel="noopener" class="service-banner-btn">
+                                <i data-lucide="message-circle"></i> Chat on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 17. Google Sheets Data Entry -->
+                    <div class="service-banner-card">
+                        <div class="service-banner-header">
+                            <div class="service-banner-icon">
+                                <i data-lucide="sheet"></i>
+                            </div>
+                        </div>
+                        <div class="service-banner-body">
+                            <h3 class="service-banner-name">Google Sheets Data Entry</h3>
+                            <p class="service-banner-text">Real-time cloud spreadsheet setup, formulas, and updates.</p>
+                        </div>
+                        <div class="service-banner-footer">
+                            <a href="https://wa.me/919137822376?text=Hello%20KY%20Tech%2C%20I%20need%20Google%20Sheets%20Data%20Entry.%20Details%3A%20" target="_blank" rel="noopener" class="service-banner-btn">
+                                <i data-lucide="message-circle"></i> Chat on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 18. Copy-Paste Data Entry -->
+                    <div class="service-banner-card">
+                        <div class="service-banner-header">
+                            <div class="service-banner-icon">
+                                <i data-lucide="copy"></i>
+                            </div>
+                        </div>
+                        <div class="service-banner-body">
+                            <h3 class="service-banner-name">Copy-Paste Data Entry</h3>
+                            <p class="service-banner-text">Meticulous manual data extraction across web, PDFs and sheets.</p>
+                        </div>
+                        <div class="service-banner-footer">
+                            <a href="https://wa.me/919137822376?text=Hello%20KY%20Tech%2C%20I%20need%20Copy-Paste%20Data%20Entry.%20Details%3A%20" target="_blank" rel="noopener" class="service-banner-btn">
+                                <i data-lucide="message-circle"></i> Chat on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 19. Data Cleaning -->
+                    <div class="service-banner-card">
+                        <div class="service-banner-header">
+                            <div class="service-banner-icon">
+                                <i data-lucide="filter"></i>
+                            </div>
+                        </div>
+                        <div class="service-banner-body">
+                            <h3 class="service-banner-name">Data Cleaning</h3>
+                            <p class="service-banner-text">Deduplication, formatting fix, and structured validation.</p>
+                        </div>
+                        <div class="service-banner-footer">
+                            <a href="https://wa.me/919137822376?text=Hello%20KY%20Tech%2C%20I%20need%20Data%20Cleaning.%20Details%3A%20" target="_blank" rel="noopener" class="service-banner-btn">
+                                <i data-lucide="message-circle"></i> Chat on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 20. Excel Formatting -->
+                    <div class="service-banner-card">
+                        <div class="service-banner-header">
+                            <div class="service-banner-icon">
+                                <i data-lucide="layout-grid"></i>
+                            </div>
+                        </div>
+                        <div class="service-banner-body">
+                            <h3 class="service-banner-name">Excel Formatting</h3>
+                            <p class="service-banner-text">Formulas, charts, conditional styling, and clean dashboards.</p>
+                        </div>
+                        <div class="service-banner-footer">
+                            <a href="https://wa.me/919137822376?text=Hello%20KY%20Tech%2C%20I%20need%20Excel%20Formatting.%20Details%3A%20" target="_blank" rel="noopener" class="service-banner-btn">
+                                <i data-lucide="message-circle"></i> Chat on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 21. PDF → Word / Excel -->
+                    <div class="service-banner-card">
+                        <div class="service-banner-header">
+                            <div class="service-banner-icon">
+                                <i data-lucide="arrow-right-left"></i>
+                            </div>
+                        </div>
+                        <div class="service-banner-body">
+                            <h3 class="service-banner-name">PDF → Word / Excel</h3>
+                            <p class="service-banner-text">Precision conversions preserving original tables, fonts and layout.</p>
+                        </div>
+                        <div class="service-banner-footer">
+                            <a href="https://wa.me/919137822376?text=Hello%20KY%20Tech%2C%20I%20need%20PDF%20to%20Word%20%2F%20Excel%20conversion.%20Details%3A%20" target="_blank" rel="noopener" class="service-banner-btn">
+                                <i data-lucide="message-circle"></i> Chat on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 22. Word → PDF -->
+                    <div class="service-banner-card">
+                        <div class="service-banner-header">
+                            <div class="service-banner-icon">
+                                <i data-lucide="file-down"></i>
+                            </div>
+                        </div>
+                        <div class="service-banner-body">
+                            <h3 class="service-banner-name">Word → PDF</h3>
+                            <p class="service-banner-text">High-resolution, print-ready and web-optimized PDF exports.</p>
+                        </div>
+                        <div class="service-banner-footer">
+                            <a href="https://wa.me/919137822376?text=Hello%20KY%20Tech%2C%20I%20need%20Word%20to%20PDF%20conversion.%20Details%3A%20" target="_blank" rel="noopener" class="service-banner-btn">
+                                <i data-lucide="message-circle"></i> Chat on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 23. Excel ↔ CSV -->
+                    <div class="service-banner-card">
+                        <div class="service-banner-header">
+                            <div class="service-banner-icon">
+                                <i data-lucide="refresh-cw"></i>
+                            </div>
+                        </div>
+                        <div class="service-banner-body">
+                            <h3 class="service-banner-name">Excel ↔ CSV</h3>
+                            <p class="service-banner-text">Clean format conversions formatted for databases and CRM imports.</p>
+                        </div>
+                        <div class="service-banner-footer">
+                            <a href="https://wa.me/919137822376?text=Hello%20KY%20Tech%2C%20I%20need%20Excel%20CSV%20conversion.%20Details%3A%20" target="_blank" rel="noopener" class="service-banner-btn">
+                                <i data-lucide="message-circle"></i> Chat on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 24. File & Data Conversion -->
+                    <div class="service-banner-card">
+                        <div class="service-banner-header">
+                            <div class="service-banner-icon">
+                                <i data-lucide="files"></i>
+                            </div>
+                        </div>
+                        <div class="service-banner-body">
+                            <h3 class="service-banner-name">File &amp; Data Conversion</h3>
+                            <p class="service-banner-text">Universal conversion for documents, data, sheets, and image files.</p>
+                        </div>
+                        <div class="service-banner-footer">
+                            <a href="https://wa.me/919137822376?text=Hello%20KY%20Tech%2C%20I%20need%20File%20%26%20Data%20Conversion.%20Details%3A%20" target="_blank" rel="noopener" class="service-banner-btn">
+                                <i data-lucide="message-circle"></i> Chat on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
-            </div>
-        </section>
 
-        <!-- 4. OUR SERVICES -->
-        <section class="services-section" id="services" style="padding: 6rem 0;">
-            <div class="container">
-                <div style="text-align: center; max-width: 800px; margin: 0 auto 4rem auto;">
-                    <div class="section-tag">
-                        <span class="dot"></span> Practical Solutions
+                <!-- Custom Task WhatsApp Strip -->
+                <div class="catalogue-cta-strip">
+                    <div class="catalogue-cta-text">
+                        <h3>Need any of these digital tasks done quickly?</h3>
+                        <p>Send your file, image, or text requirement directly on WhatsApp. We provide upfront pricing and fast delivery.</p>
                     </div>
-                    <h2 class="section-title">Our Key <span>Digital Services</span></h2>
-                    <p class="section-desc" style="margin: 0 auto;">
-                        Practical digital solutions for individual customers, professionals, and small businesses.
-                    </p>
-                </div>
-
-                <div class="services-grid">
-                    <!-- Service 1: Website Development -->
-                    <div class="service-card glass-card">
-                        <div class="service-icon-box">
-                            <i data-lucide="globe"></i>
-                        </div>
-                        <h2>Website Development</h2>
-                        <p>Business Website • Landing Page • Website Updates</p>
-                        <ul class="service-features">
-                            <li><i data-lucide="check"></i> Custom Modern Design</li>
-                            <li><i data-lucide="check"></i> Mobile Responsive</li>
-                            <li><i data-lucide="check"></i> WhatsApp Lead Integration</li>
-                        </ul>
-                    </div>
-
-                    <!-- Service 2: WhatsApp Business Setup -->
-                    <div class="service-card glass-card">
-                        <div class="service-icon-box" style="background: rgba(37, 211, 102, 0.15); color: #25D366;">
-                            <i data-lucide="message-circle"></i>
-                        </div>
-                        <h2>WhatsApp Business Setup</h2>
-                        <p>Business Profile • Catalogue • Customer Enquiry Setup</p>
-                        <ul class="service-features">
-                            <li><i data-lucide="check"></i> Verified Business Profile</li>
-                            <li><i data-lucide="check"></i> Product / Service Catalogue</li>
-                            <li><i data-lucide="check"></i> Quick Reply &amp; Away Messages</li>
-                        </ul>
-                    </div>
-
-                    <!-- Service 3: Digital Document Services -->
-                    <div class="service-card glass-card">
-                        <div class="service-icon-box">
-                            <i data-lucide="file-check"></i>
-                        </div>
-                        <h2>Digital Document Services</h2>
-                        <p>PDF • Formatting • Conversion • Basic Documentation</p>
-                        <ul class="service-features">
-                            <li><i data-lucide="check"></i> High-Speed PDF Optimization</li>
-                            <li><i data-lucide="check"></i> Clean Word &amp; PDF Formatting</li>
-                            <li><i data-lucide="check"></i> Document Security &amp; Watermarks</li>
-                        </ul>
-                    </div>
-
-                    <!-- Service 4: Graphic Design -->
-                    <div class="service-card glass-card">
-                        <div class="service-icon-box">
-                            <i data-lucide="image"></i>
-                        </div>
-                        <h2>Graphic Design</h2>
-                        <p>Poster • Visiting Card • Social Media Post • Digital Card</p>
-                        <ul class="service-features">
-                            <li><i data-lucide="check"></i> Creative Marketing Posters</li>
-                            <li><i data-lucide="check"></i> Print-Ready Visiting Cards</li>
-                            <li><i data-lucide="check"></i> Clickable Digital Business Cards</li>
-                        </ul>
-                    </div>
-
-                    <!-- Service 5: Business Digital Setup -->
-                    <div class="service-card glass-card">
-                        <div class="service-icon-box">
-                            <i data-lucide="briefcase"></i>
-                        </div>
-                        <h2>Business Digital Setup</h2>
-                        <p>Online Presence • Contact Setup • Basic Business Support</p>
-                        <ul class="service-features">
-                            <li><i data-lucide="check"></i> Google Business Profile Setup</li>
-                            <li><i data-lucide="check"></i> Professional Email &amp; Contact Links</li>
-                            <li><i data-lucide="check"></i> Local Online Discovery</li>
-                        </ul>
-                    </div>
-
-                    <!-- Service 6: Website Maintenance -->
-                    <div class="service-card glass-card">
-                        <div class="service-icon-box">
-                            <i data-lucide="wrench"></i>
-                        </div>
-                        <h2>Website Maintenance</h2>
-                        <p>Content Updates • Basic Changes • Maintenance Support</p>
-                        <ul class="service-features">
-                            <li><i data-lucide="check"></i> Fast Content &amp; Image Changes</li>
-                            <li><i data-lucide="check"></i> Bug Fixing &amp; Layout Polishing</li>
-                            <li><i data-lucide="check"></i> Security &amp; Speed Checks</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div style="text-align: center; margin-top: 3.5rem;">
-                    <a href="https://wa.me/919137822376?text=Hello%20KY%20Tech%20Services%2C%20I%20would%20like%20to%20choose%20a%20service.%20My%20requirement%20is%3A%20" target="_blank" rel="noopener" class="btn btn-whatsapp" style="padding: 1rem 2.25rem; font-size: 1.05rem;">
-                        <i data-lucide="check-circle" style="width: 20px; height: 20px;"></i> Choose My Service
+                    <a href="https://wa.me/919137822376?text=Hello%20KY%20Tech%20Services%2C%20I%20have%20a%20requirement%20for%20your%20Digital%20Services%20(Design%2FContent%2FResume%2FData%20Entry).%20Details%3A%20" target="_blank" rel="noopener" class="btn btn-whatsapp" style="padding: 0.95rem 2rem; font-size: 1rem; white-space: nowrap;">
+                        <i data-lucide="message-circle" style="width: 20px; height: 20px;"></i> Chat on WhatsApp
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- 5. WEBSITE SERVICES -->
-        <section class="website-section" id="website-services" style="padding: 6rem 0; background: hsla(var(--bg-secondary-raw), 0.35);">
+        <!-- 5. WHY KY TECH? -->
+        <section class="why-us-section" id="why-us" style="padding: 2.25rem 0 3rem 0;">
             <div class="container">
-                <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-                    <div class="section-tag">
-                        <span class="dot"></span> Online Presence
-                    </div>
-                    <h2 class="section-title">Professional Website <span>for Your Business</span></h2>
-                    <p class="section-desc" style="margin: 0 auto 2.5rem auto;">
-                        In today's digital world, having an online presence is important for your business.
-                    </p>
-
-                    <!-- Features Pills Row -->
-                    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.85rem; margin-bottom: 2rem;">
-                        <span class="trust-badge-pill"><i data-lucide="check-circle"></i> Business Websites</span>
-                        <span class="trust-badge-pill"><i data-lucide="check-circle"></i> Landing Pages</span>
-                        <span class="trust-badge-pill"><i data-lucide="check-circle"></i> Mobile Responsive Designs</span>
-                        <span class="trust-badge-pill"><i data-lucide="check-circle"></i> WhatsApp Integration</span>
-                        <span class="trust-badge-pill"><i data-lucide="check-circle"></i> Contact Forms</span>
-                        <span class="trust-badge-pill"><i data-lucide="check-circle"></i> Basic SEO Setup</span>
-                    </div>
-                </div>
-
-                <!-- 3 Website Pricing Tiers -->
-                <div class="website-pricing-grid">
-                    <!-- Starter Website -->
-                    <div class="web-pricing-card glass-card">
-                        <h3 class="web-pricing-name">Starter Website</h3>
-                        <div class="web-pricing-cost">₹999 <small>onwards</small></div>
-                        <ul class="web-pricing-features">
-                            <li><i data-lucide="check"></i> 1 Page Website</li>
-                            <li><i data-lucide="check"></i> WhatsApp Button</li>
-                            <li><i data-lucide="check"></i> Contact Details</li>
-                            <li><i data-lucide="check"></i> Mobile Responsive</li>
-                        </ul>
-                        <a href="https://wa.me/919137822376?text=Hello%20KY%20Tech%2C%20I%20am%20interested%20in%20Starter%20Website%20(%E2%82%B9999%20onwards).%20My%20details%3A%20" target="_blank" rel="noopener" class="btn btn-primary" style="width: 100%; justify-content: center;">
-                            Get Started <i data-lucide="arrow-right" class="btn-icon"></i>
-                        </a>
-                    </div>
-
-                    <!-- Business Website (Featured) -->
-                    <div class="web-pricing-card glass-card featured">
-                        <div class="pricing-badge-popular">Most Popular</div>
-                        <h3 class="web-pricing-name">Business Website</h3>
-                        <div class="web-pricing-cost">₹1,999 <small>onwards</small></div>
-                        <ul class="web-pricing-features">
-                            <li><i data-lucide="check"></i> 4–5 Sections Layout</li>
-                            <li><i data-lucide="check"></i> WhatsApp Integration</li>
-                            <li><i data-lucide="check"></i> Interactive Contact Form</li>
-                            <li><i data-lucide="check"></i> Basic SEO Setup</li>
-                            <li><i data-lucide="check"></i> Mobile Responsive</li>
-                        </ul>
-                        <a href="https://wa.me/919137822376?text=Hello%20KY%20Tech%2C%20I%20am%20interested%20in%20Business%20Website%20(%E2%82%B91%2C999%20onwards).%20My%20details%3A%20" target="_blank" rel="noopener" class="btn btn-whatsapp" style="width: 100%; justify-content: center; padding: 0.9rem;">
-                            <i data-lucide="message-circle" style="width: 18px; height: 18px;"></i> Get Business Quote
-                        </a>
-                    </div>
-
-                    <!-- Professional Website -->
-                    <div class="web-pricing-card glass-card">
-                        <h3 class="web-pricing-name">Professional Website</h3>
-                        <div class="web-pricing-cost">₹3,999 <small>onwards</small></div>
-                        <ul class="web-pricing-features">
-                            <li><i data-lucide="check"></i> Multi-page Website</li>
-                            <li><i data-lucide="check"></i> Custom Design &amp; Animations</li>
-                            <li><i data-lucide="check"></i> WhatsApp Integration</li>
-                            <li><i data-lucide="check"></i> Contact Form &amp; Lead Capture</li>
-                            <li><i data-lucide="check"></i> Basic SEO Setup</li>
-                            <li><i data-lucide="check"></i> Business-focused Setup</li>
-                        </ul>
-                        <a href="https://wa.me/919137822376?text=Hello%20KY%20Tech%2C%20I%20want%20to%20discuss%20a%20Professional%20Website%20(%E2%82%B93%2C999%20onwards).%20My%20project%3A%20" target="_blank" rel="noopener" class="btn btn-secondary" style="width: 100%; justify-content: center;">
-                            Discuss Project <i data-lucide="arrow-right" class="btn-icon"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 6. WHY KY TECH? -->
-        <section class="why-us-section" id="why-us" style="padding: 6rem 0;">
-            <div class="container">
-                <div style="text-align: center; max-width: 750px; margin: 0 auto 4rem auto;">
+                <div style="text-align: center; max-width: 750px; margin: 0 auto 2rem auto;">
                     <div class="section-tag">
                         <span class="dot"></span> The KY Tech Advantage
                     </div>
@@ -500,9 +682,9 @@
         </section>
 
         <!-- 7. HOW IT WORKS -->
-        <section class="how-it-works-section" id="how-it-works" style="padding: 6rem 0; background: hsla(var(--bg-secondary-raw), 0.4);">
+        <section class="how-it-works-section" id="how-it-works" style="padding: 3rem 0; background: hsla(var(--bg-secondary-raw), 0.4);">
             <div class="container">
-                <div style="text-align: center; max-width: 750px; margin: 0 auto 4rem auto;">
+                <div style="text-align: center; max-width: 750px; margin: 0 auto 2rem auto;">
                     <div class="section-tag">
                         <span class="dot"></span> Simple 4-Step Process
                     </div>
@@ -558,7 +740,7 @@
                     </div>
                 </div>
 
-                <div style="text-align: center; margin-top: 3.5rem;">
+                <div style="text-align: center; margin-top: 2rem;">
                     <a href="https://wa.me/919137822376?text=Hello%20KY%20Tech%20Services%2C%20I%20am%20sending%20my%20requirement%20to%20get%20started%3A%20" target="_blank" rel="noopener" class="btn btn-whatsapp" style="padding: 1rem 2.25rem; font-size: 1.05rem;">
                         <i data-lucide="send" style="width: 18px; height: 18px;"></i> Send Your Requirement on WhatsApp
                     </a>
@@ -566,133 +748,8 @@
             </div>
         </section>
 
-        <!-- 8. TODAY'S QUICK OFFERS -->
-        <section class="offers-section" id="offers" style="padding: 6rem 0;">
-            <div class="container">
-                <div style="text-align: center; max-width: 750px; margin: 0 auto 3.5rem auto;">
-                    <div class="section-tag">
-                        <span class="dot"></span> Daily Value
-                    </div>
-                    <h2 class="section-title">Digital Services You Can <span>Get Done Today</span></h2>
-                    <p class="section-desc" style="margin: 0 auto;">
-                        Fast turnarounds and transparent pricing for your everyday digital needs.
-                    </p>
-                </div>
-
-                <div class="offers-table-card">
-                    <table class="offers-table">
-                        <thead>
-                            <tr>
-                                <th>Service</th>
-                                <th style="text-align: right;">Starting Price</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>📄 PDF / Document Work</td>
-                                <td class="offers-price-cell" style="text-align: right;">₹99+</td>
-                            </tr>
-                            <tr>
-                                <td>📄 Resume / CV</td>
-                                <td class="offers-price-cell" style="text-align: right;">₹199+</td>
-                            </tr>
-                            <tr>
-                                <td>🎨 Poster Design</td>
-                                <td class="offers-price-cell" style="text-align: right;">₹199+</td>
-                            </tr>
-                            <tr>
-                                <td>🪪 Digital Visiting Card</td>
-                                <td class="offers-price-cell" style="text-align: right;">₹299+</td>
-                            </tr>
-                            <tr>
-                                <td>📱 Business WhatsApp Setup</td>
-                                <td class="offers-price-cell" style="text-align: right;">₹499+</td>
-                            </tr>
-                            <tr>
-                                <td>🌐 Landing Page</td>
-                                <td class="offers-price-cell" style="text-align: right;">₹999+</td>
-                            </tr>
-                            <tr>
-                                <td>💼 Business Website</td>
-                                <td class="offers-price-cell" style="text-align: right;">₹1,999+</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div style="text-align: center; margin-top: 3rem;">
-                    <a href="https://wa.me/919137822376?text=Hello%20KY%20Tech%2C%20I%20want%20to%20choose%20today%27s%20quick%20service.%20My%20selected%20service%20is%3A%20" target="_blank" rel="noopener" class="btn btn-primary" style="padding: 0.95rem 2rem; font-size: 1.05rem;">
-                        🔥 Choose Today's Service <i data-lucide="arrow-right" class="btn-icon"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- 9. PRICING -->
-        <section class="pricing-section" id="pricing" style="padding: 6rem 0; background: hsla(var(--bg-secondary-raw), 0.35);">
-            <div class="container">
-                <div style="text-align: center; max-width: 750px; margin: 0 auto 3.5rem auto;">
-                    <div class="section-tag">
-                        <span class="dot"></span> Clear Costing
-                    </div>
-                    <h2 class="section-title">Simple &amp; <span>Transparent Pricing</span></h2>
-                    <p class="section-desc" style="margin: 0 auto;">
-                        Choose the package that fits your current project stage. No surprise fees.
-                    </p>
-                </div>
-
-                <div class="website-pricing-grid" style="margin-top: 2rem;">
-                    <!-- Tier 1: STARTER -->
-                    <div class="web-pricing-card glass-card">
-                        <h3 class="web-pricing-name">STARTER</h3>
-                        <div class="web-pricing-cost">₹99 – ₹499</div>
-                        <ul class="web-pricing-features">
-                            <li><i data-lucide="check"></i> Small Digital Tasks</li>
-                            <li><i data-lucide="check"></i> Document Services</li>
-                            <li><i data-lucide="check"></i> Basic Designs</li>
-                            <li><i data-lucide="check"></i> Quick Services Turnaround</li>
-                        </ul>
-                        <a href="https://wa.me/919137822376?text=Hello%20KY%20Tech%2C%20I%20am%20interested%20in%20the%20STARTER%20plan%20(%E2%82%B999%20%E2%80%93%20%E2%82%B9499).%20My%20requirement%3A%20" target="_blank" rel="noopener" class="btn btn-whatsapp" style="width: 100%; justify-content: center;">
-                            <i data-lucide="message-circle" style="width: 18px; height: 18px;"></i> Chat on WhatsApp
-                        </a>
-                    </div>
-
-                    <!-- Tier 2: BUSINESS -->
-                    <div class="web-pricing-card glass-card featured">
-                        <div class="pricing-badge-popular">Best Value</div>
-                        <h3 class="web-pricing-name">BUSINESS</h3>
-                        <div class="web-pricing-cost">₹999 – ₹1,999</div>
-                        <ul class="web-pricing-features">
-                            <li><i data-lucide="check"></i> Complete Website</li>
-                            <li><i data-lucide="check"></i> Business Setup</li>
-                            <li><i data-lucide="check"></i> WhatsApp Integration</li>
-                            <li><i data-lucide="check"></i> Digital Online Presence</li>
-                        </ul>
-                        <a href="https://wa.me/919137822376?text=Hello%20KY%20Tech%2C%20I%20am%20interested%20in%20the%20BUSINESS%20plan%20(%E2%82%B9999%20%E2%80%93%20%E2%82%B91%2C999).%20My%20details%3A%20" target="_blank" rel="noopener" class="btn btn-whatsapp" style="width: 100%; justify-content: center; padding: 0.9rem;">
-                            <i data-lucide="message-circle" style="width: 18px; height: 18px;"></i> Get Business Quote
-                        </a>
-                    </div>
-
-                    <!-- Tier 3: PROFESSIONAL -->
-                    <div class="web-pricing-card glass-card">
-                        <h3 class="web-pricing-name">PROFESSIONAL</h3>
-                        <div class="web-pricing-cost">₹3,999+</div>
-                        <ul class="web-pricing-features">
-                            <li><i data-lucide="check"></i> Advanced Website</li>
-                            <li><i data-lucide="check"></i> Custom Requirements</li>
-                            <li><i data-lucide="check"></i> Comprehensive Business Solutions</li>
-                            <li><i data-lucide="check"></i> Additional Priority Support</li>
-                        </ul>
-                        <a href="https://wa.me/919137822376?text=Hello%20KY%20Tech%2C%20I%20want%20to%20discuss%20the%20PROFESSIONAL%20plan%20(%E2%82%B93%2C999%2B).%20My%20project%3A%20" target="_blank" rel="noopener" class="btn btn-whatsapp" style="width: 100%; justify-content: center;">
-                            <i data-lucide="message-circle" style="width: 18px; height: 18px;"></i> Discuss Your Project
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- 10. WHATSAPP CTA SECTION -->
-        <section class="whatsapp-cta-section" id="whatsapp-cta" style="padding: 6rem 0;">
+        <section class="whatsapp-cta-section" id="whatsapp-cta" style="padding: 2.75rem 0;">
             <div class="container">
                 <div class="whatsapp-cta-banner">
                     <h2>Start Your Work Through WhatsApp</h2>
@@ -712,9 +769,9 @@
         </section>
 
         <!-- 11. FAQ -->
-        <section class="faq-section" id="faq" style="padding: 6rem 0; background: hsla(var(--bg-secondary-raw), 0.35);">
+        <section class="faq-section" id="faq" style="padding: 3rem 0; background: hsla(var(--bg-secondary-raw), 0.35);">
             <div class="container">
-                <div style="text-align: center; max-width: 750px; margin: 0 auto 3.5rem auto;">
+                <div style="text-align: center; max-width: 750px; margin: 0 auto 2rem auto;">
                     <div class="section-tag">
                         <span class="dot"></span> Got Questions?
                     </div>
@@ -795,7 +852,7 @@
         </section>
 
         <!-- 12. FINAL CTA -->
-        <section class="final-cta-section" id="contact" style="padding: 6rem 0;">
+        <section class="final-cta-section" id="contact" style="padding: 3rem 0;">
             <div class="container">
                 <div class="achievement-cta-card" style="background: linear-gradient(135deg, hsl(221, 95%, 42%) 0%, hsl(224, 100%, 25%) 100%);">
                     <h2>Let's Start Your Online Work Today 🚀</h2>
@@ -845,8 +902,9 @@
                 <div class="footer-col-title">Quick Links</div>
                 <div class="footer-links">
                     <a href="#home">Home</a>
-                    <a href="#services">Services</a>
-                    <a href="#pricing">Pricing</a>
+                    <a href="services.html">Services</a>
+                    <a href="#quick-services">Quick Services</a>
+                    <a href="#why-us">Why Choose Us</a>
                     <a href="#how-it-works">How It Works</a>
                     <a href="#faq">FAQ</a>
                     <a href="#contact">Contact</a>
@@ -856,11 +914,11 @@
             <div class="footer-col">
                 <div class="footer-col-title">Services</div>
                 <div class="footer-links">
-                    <a href="#website-services">Website Development</a>
+                    <a href="services.html">Website Development</a>
                     <a href="#quick-services">Digital Services</a>
-                    <a href="#services">WhatsApp Business</a>
+                    <a href="services.html">WhatsApp Business</a>
                     <a href="#quick-services">Graphic Design</a>
-                    <a href="#services">Online Support</a>
+                    <a href="services.html">Online Support</a>
                 </div>
             </div>
 
