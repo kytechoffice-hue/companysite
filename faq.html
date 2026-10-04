@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>FAQ | KY Tech Services &mdash; Frequently Asked Questions About Digital Services</title>
+    <meta name="description" content="Get answers to frequently asked questions about KY Tech Services &mdash; website development, graphic design, data entry, pricing, WhatsApp support, delivery timelines, and more. Serving clients across India starting from just &#8377;99.">
+    <meta name="keywords" content="KY Tech FAQ, website development FAQ India, digital services questions, affordable website cost India, WhatsApp business setup FAQ, graphic design service FAQ, data entry service India, static website development FAQ, e-commerce website FAQ India, logo design service FAQ, online digital services India, cheap website development India, resume making service FAQ, data cleaning service, document formatting service, KY Tech Services frequently asked questions">
+    <meta name="author" content="KY Tech Services">
+    <link rel="canonical" href="https://kytechserv.com/faq">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="FAQ | KY Tech Services &mdash; Your Questions Answered">
+    <meta property="og:description" content="Find answers to common questions about KY Tech Services &mdash; pricing, website development, delivery time, payment, WhatsApp support, and more.">
+    <meta property="og:image" content="logo-icon.webp">
+    <meta property="og:url" content="https://kytechserv.com/faq">
+    <meta property="og:type" content="website">
+
+    <!-- FAQ Schema Structured Data for Google Rich Results -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type":"Question","name":"Are your digital services available online?","acceptedAnswer":{"@type":"Answer","text":"Yes. All our digital services are 100% online. You connect with us via WhatsApp, share your files, and receive completed work without visiting any office."}},
+        {"@type":"Question","name":"What is the minimum price for your services?","acceptedAnswer":{"@type":"Answer","text":"Quick Digital Services start from Rs.99 for basic document formatting and data entry. Website development packages start from Rs.999."}},
+        {"@type":"Question","name":"How long does it take to build a website?","acceptedAnswer":{"@type":"Answer","text":"A standard static website takes 3-7 working days. E-commerce websites take 10-20 days depending on features required."}},
+        {"@type":"Question","name":"How do I contact KY Tech Services?","acceptedAnswer":{"@type":"Answer","text":"Contact us via WhatsApp at +91 91378 22376 or email at help@kytechserv.com. We respond promptly during business hours."}},
+        {"@type":"Question","name":"Do you offer urgent or same-day delivery?","acceptedAnswer":{"@type":"Answer","text":"Urgent delivery is available for select services. Mention your deadline on WhatsApp and we will prioritise your order. A small urgency fee may apply."}},
+        {"@type":"Question","name":"Will my website be mobile-friendly?","acceptedAnswer":{"@type":"Answer","text":"Yes, every website we build is 100% responsive and looks great on mobile phones, tablets, and desktops."}},
+        {"@type":"Question","name":"Is my data kept confidential?","acceptedAnswer":{"@type":"Answer","text":"Yes. All files and information shared with us are kept strictly confidential. We do not share your data with any third party. We can sign an NDA if required."}},
+        {"@type":"Question","name":"What payment methods do you accept?","acceptedAnswer":{"@type":"Answer","text":"We accept UPI (GPay, PhonePe, Paytm), bank transfer (NEFT/IMPS), and online payment links."}},
+        {"@type":"Question","name":"How does the order process work?","acceptedAnswer":{"@type":"Answer","text":"Send your requirement on WhatsApp, receive a price quote, confirm and pay, then receive your completed work. Simple 4-step process."}}
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/webp" href="logo-icon.webp">
+    <script src="lucide.min.js" defer></script>
+
+    <style>
+        .faq-page-hero {
+            padding-top: 8rem;
+            padding-bottom: 3rem;
+            text-align: center;
+            background: radial-gradient(ellipse at 60% 0%, var(--primary-light) 0%, transparent 60%);
+        }
+        .faq-search-wrap {
+            position: relative;
+            max-width: 520px;
+            margin: 0 auto 2rem auto;
+        }
+        .faq-search-input {
+            width: 100%;
+            padding: 0.9rem 1.25rem 0.9rem 3rem;
+            border-radius: var(--radius-full);
+            border: 1.5px solid var(--border-color);
+            background: rgba(var(--bg-glass-raw), 0.7);
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+        }
+        .faq-search-input:focus { border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-light); }
+        .faq-search-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-light);
+            pointer-events: none;
+            width: 18px; height: 18px;
+        }
+        .faq-category-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.6rem;
+            margin-bottom: 2.5rem;
+        }
+        .faq-tab-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.5rem 1.1rem;
+            border-radius: var(--radius-full);
+            border: 1.5px solid var(--border-color);
+            background: rgba(var(--bg-glass-raw), 0.6);
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            font-family: var(--font-body);
+        }
+        .faq-tab-btn i, .faq-tab-btn svg { width: 15px; height: 15px; }
+        .faq-tab-btn.active, .faq-tab-btn:hover { background: var(--primary); border-color: var(--primary); color: #fff; }
+        .faq-category-section { margin-bottom: 2.75rem; }
+        .faq-cat-heading {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 1.15rem;
+            font-weight: 800;
+            font-family: var(--font-heading);
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            padding-bottom: 0.65rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+        .faq-cat-heading i, .faq-cat-heading svg { width: 20px; height: 20px; }
+        .cat-blue   { color: #2563eb; }
+        .cat-teal   { color: #0d9488; }
+        .cat-orange { color: #ea580c; }
+        .cat-pink   { color: #db2777; }
+        .cat-purple { color: #7c3aed; }
+        .cat-green  { color: #16a34a; }
+        .faq-item.faq-hidden { display: none; }
+        .faq-no-results {
+            display: none;
+            text-align: center;
+            padding: 2.5rem 1rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+        .faq-no-results i, .faq-no-results svg { width: 44px; height: 44px; display: block; margin: 0 auto 1rem; color: var(--text-light); }
+        .faq-cta-box {
+            background: linear-gradient(135deg, hsl(221,95%,42%) 0%, hsl(224,100%,25%) 100%);
+            border-radius: var(--radius-lg);
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            color: #fff;
+        }
+        .faq-cta-box h2 { font-size: 1.8rem; margin-bottom: 0.75rem; font-family: var(--font-heading); }
+        .faq-cta-box p  { opacity: 0.85; margin-bottom: 1.75rem; max-width: 550px; margin-left: auto; margin-right: auto; font-size: 1rem; }
+        .faq-cta-btns { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+        @media (max-width: 640px) {
+            .faq-page-hero { padding-top: 7rem; }
+            .faq-cta-box h2 { font-size: 1.4rem; }
+        }
+    </style>
+</head>
+<body data-theme="light">
+
+    <!-- HEADER -->
+    <header class="header" id="main-header">
+        <div class="container navbar">
+            <a href="index.html" class="logo-link" id="logo-anchor">
+                <img src="logo-icon.webp" alt="KY Tech Logo" class="logo-img-icon" width="45" height="45" style="height:45px;width:auto;object-fit:contain;transition:transform var(--transition-normal);">
+                <div class="logo-text">
+                    <span style="font-family:var(--font-heading);font-weight:800;font-size:1.3rem;letter-spacing:0.05em;color:var(--text-primary);">KY TECH SERVICES</span>
+                    <span style="display:block;font-size:0.55rem;font-weight:700;letter-spacing:0.28em;color:var(--text-light);text-transform:uppercase;">Innovate &bull; Secure &bull; Deliver</span>
+                </div>
+            </a>
+            <nav class="nav-menu" id="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="achievements.html" class="nav-link">Our Achievements</a>
+                <a href="faq.html" class="nav-link active">FAQ</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+            </nav>
+            <div class="nav-actions">
+                <div class="theme-toggle" id="theme-btn" role="button" tabindex="0" title="Toggle Theme" aria-label="Toggle Theme">
+                    <svg class="theme-toggle-icon sun-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+                    <svg class="theme-toggle-icon moon-icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </div>
+                <a href="https://wa.me/919137822376?text=Hello%20KY%20Tech%2C%20I%20have%20a%20question%3A%20" target="_blank" rel="noopener" class="btn btn-whatsapp" id="header-whatsapp-btn">
+                    <i data-lucide="message-circle" style="width:18px;height:18px;"></i> WhatsApp Now
+                </a>
+                <div class="burger-menu" id="menu-toggle" role="button" tabindex="0" aria-label="Toggle Menu">
+                    <div class="burger-line"></div>
+                    <div class="burger-line"></div>
+                    <div class="burger-line"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="faq-page-hero" id="faq-top">
+            <div class="container">
+                <div class="section-tag" style="justify-content:center;">
+                    <span class="dot"></span> Help Centre
+                </div>
+                <h1 class="section-title" style="max-width:700px;margin:0 auto 1rem;">
+                    Frequently Asked <span>Questions</span>
+                </h1>
+                <p class="section-desc" style="max-width:600px;margin:0 auto 2rem;">
+                    Quick answers to common questions about our services, pricing, and process. Still unsure? Just WhatsApp us!
+                </p>
+
+                <!-- Search bar -->
+                <div class="faq-search-wrap">
+                    <i data-lucide="search" class="faq-search-icon"></i>
+                    <input type="text" id="faq-search" class="faq-search-input" placeholder="Search your question&hellip;" aria-label="Search FAQ questions">
+                </div>
+
+                <!-- Category Tabs -->
+                <div class="faq-category-tabs" id="faq-tabs">
+                    <button class="faq-tab-btn active" data-cat="all" id="tab-all"><i data-lucide="layout-grid"></i> All</button>
+                    <button class="faq-tab-btn" data-cat="general"><i data-lucide="info"></i> General</button>
+                    <button class="faq-tab-btn" data-cat="pricing"><i data-lucide="indian-rupee"></i> Pricing</button>
+                    <button class="faq-tab-btn" data-cat="website"><i data-lucide="globe"></i> Website Dev</button>
+                    <button class="faq-tab-btn" data-cat="design"><i data-lucide="pen-tool"></i> Design</button>
+                    <button class="faq-tab-btn" data-cat="data"><i data-lucide="table"></i> Data Services</button>
+                    <button class="faq-tab-btn" data-cat="process"><i data-lucide="git-branch"></i> Process</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ QUESTIONS -->
+        <section style="padding:2rem 0 4rem;">
+            <div class="container" style="max-width:820px;">
+
+                <div id="faq-no-results" class="faq-no-results">
+                    <i data-lucide="search-x"></i>
+                    No questions matched your search. Try different keywords or
+                    <a href="https://wa.me/919137822376" target="_blank" style="color:var(--primary);font-weight:700;">ask us on WhatsApp</a>.
+                </div>
+
+                <!-- ── GENERAL ── -->
+                <div class="faq-category-section" data-category="general" id="sec-general">
+                    <div class="faq-cat-heading">
+                        <i data-lucide="info" class="cat-blue"></i> General Questions
+                    </div>
+                    <div class="faq-accordion">
+                        <div class="faq-item active" data-cat="general">
+                            <div class="faq-question"><span>Q. Are your services available online?</span><i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                            <div class="faq-answer">Yes. All our digital services are 100% online. You connect via WhatsApp or email, share your files or requirements, and receive the completed work — no physical visit required.</div>
+                        </div>
+                        <div class="faq-item" data-cat="general">
+                            <div class="faq-question"><span>Q. Who can use KY Tech Services?</span><i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                            <div class="faq-answer">Our services are for everyone — students, job seekers, freelancers, small business owners, schools, startups, and enterprises. If you need affordable digital help, we are here for you.</div>
+                        </div>
+                        <div class="faq-item" data-cat="general">
+                            <div class="faq-question"><span>Q. Can I contact you through WhatsApp?</span><i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                            <div class="faq-answer">Absolutely! WhatsApp is our primary channel. Send your requirement as text, voice note, photo, or document and our team will respond with pricing and next steps within minutes.</div>
+                        </div>
+                        <div class="faq-item" data-cat="general">
+                            <div class="faq-question"><span>Q. Is KY Tech Services available across all of India?</span><i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                            <div class="faq-answer">Yes! We serve clients from Maharashtra, Delhi, Karnataka, Tamil Nadu, Gujarat, Rajasthan, West Bengal, and all other states. Since everything is online, location is never a barrier.</div>
+                        </div>
+                        <div class="faq-item" data-cat="general">
+                            <div class="faq-question"><span>Q. Do you support Marathi language communication?</span><i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                            <div class="faq-answer">Yes! We support both Marathi and English. Send your requirements in Marathi and we'll respond in your preferred language.</div>
+                        </div>
+                        <div class="faq-item" data-cat="general">
+                            <div class="faq-question"><span>Q. What are your business hours?</span><i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                            <div class="faq-answer">Our primary support hours are Monday to Saturday, 9:00 AM to 7:00 PM IST. You can send a WhatsApp message any time and we will reply during business hours.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ── PRICING ── -->
+                <div class="faq-category-section" data-category="pricing" id="sec-pricing">
+                    <div class="faq-cat-heading">
+                        <i data-lucide="indian-rupee" class="cat-teal"></i> Pricing &amp; Payment
+                    </div>
+                    <div class="faq-accordion">
+                        <div class="faq-item" data-cat="pricing">
+                            <div class="faq-question"><span>Q. What is the minimum price for your services?</span><i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                            <div class="faq-answer">Quick Digital Services start from as low as &#8377;99 for basic document formatting and data entry tasks. Website development packages start from &#8377;999.</div>
+                        </div>
+                        <div class="faq-item" data-cat="pricing">
+                            <div class="faq-question"><span>Q. How is the final price decided?</span><i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                            <div class="faq-answer">We review your exact requirement and then provide a clear, all-inclusive quotation before any work begins. There are zero hidden charges — the price quoted is the price you pay.</div>
+                        </div>
+                        <div class="faq-item" data-cat="pricing">
+                            <div class="faq-question"><span>Q. When do I need to make the payment?</span><i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                            <div class="faq-answer">For small tasks, full payment is required upfront. For larger projects (websites, e-commerce), we use milestone payments — typically 50% advance and 50% on delivery.</div>
+                        </div>
+                        <div class="faq-item" data-cat="pricing">
+                            <div class="faq-question"><span>Q. What payment methods do you accept?</span><i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                            <div class="faq-answer">We accept all major UPI apps (GPay, PhonePe, Paytm), bank transfer (NEFT/IMPS/RTGS), and online payment links. Payment details are shared after quote confirmation.</div>
+                        </div>
+                        <div class="faq-item" data-cat="pricing">
+                            <div class="faq-question"><span>Q. Do you offer discounts or combo packages?</span><i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                            <div class="faq-answer">Yes! We offer combo discounts for bundled services (e.g., website + logo + visiting card). Students, NGOs, and repeat clients also get special pricing. Ask on WhatsApp!</div>
+                        </div>
+                        <div class="faq-item" data-cat="pricing">
+                            <div class="faq-question"><span>Q. Is there a refund policy?</span><i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                            <div class="faq-answer">We always share drafts/previews before final delivery. If we fail to deliver as agreed, we offer free revisions or a partial refund. Advance payments for fully completed work are non-refundable.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ── WEBSITE DEV ── -->
+                <div class="faq-category-section" data-category="website" id="sec-website">
+                    <div class="faq-cat-heading">
+                        <i data-lucide="globe" class="cat-blue"></i> Website Development
+                    </div>
+                    <div class="faq-accordion">
+                        <div class="faq-item" data-cat="website">
+                            <div class="faq-question"><span>Q. What types of websites do you build?</span><i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                            <div class="faq-answer">We build Static Business Websites, School &amp; Academic Websites, Portfolio Websites, Landing Pages, and E-Commerce Websites — all mobile-responsive, SEO-friendly, and fast-loading.</div>
+                        </div>
+                        <div class="faq-item" data-cat="website">
+                            <div class="faq-question"><span>Q. How long does website development take?</span><i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                            <div class="faq-answer">A standard static website: 3&ndash;7 working days. School/Academic websites: 5&ndash;10 days. E-commerce websites: 10&ndash;20 days depending on products and features required.</div>
+                        </div>
+                        <div class="faq-item" data-cat="website">
+                            <div class="faq-question"><span>Q. Will my website be mobile-friendly?</span><i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                            <div class="faq-answer">Yes, every website is 100% responsive. It will look and work perfectly on mobile phones, tablets, and desktop computers. Mobile-first design is standard in all our packages.</div>
+                        </div>
+                        <div class="faq-item" data-cat="website">
+                            <div class="faq-question"><span>Q. Do you provide domain and hosting setup?</span><i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                            <div class="faq-answer">We assist you in purchasing a domain and hosting plan and help with full setup. Domain and hosting costs are billed separately at actual cost. We recommend trusted providers for best performance.</div>
+                        </div>
+                        <div class="faq-item" data-cat="website">
+                            <div class="faq-question"><span>Q. Will my website rank on Google?</span><i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                            <div class="faq-answer">All websites are built with on-page SEO best practices — proper H1/H2 structure, meta tags, fast load speed, clean URLs, and schema markup. For ongoing Google ranking, we offer dedicated SEO services separately.</div>
+                        </div>
+                        <div class="faq-item" data-cat="website">
+                            <div class="faq-question"><span>Q. Can I update my website myself after delivery?</span><i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                            <div class="faq-answer">Yes. We provide documentation on basic updates. For ongoing content changes, we offer affordable maintenance packages or per-edit charges on request.</div>
+                        </div>
+                        <div class="faq-item" data-cat="website">
+                            <div class="faq-question"><span>Q. What do I need to provide to start website development?</span><i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                            <div class="faq-answer">Share your business name, logo (if available), list of pages needed, text/content, and reference website links you like. We'll guide you through everything on WhatsApp step by step.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ── DESIGN ── -->
+                <div class="faq-category-section" data-category="design" id="sec-design">
+                    <div class="faq-cat-heading">
+                        <i data-lucide="pen-tool" class="cat-pink"></i> Design Services
+                    </div>
+                    <div class="faq-accordion">
+                        <div class="faq-item" data-cat="design">
+                            <div class="faq-question"><span>Q. What design services do you offer?</span><i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                            <div class="faq-answer">We offer Logo Design, Promotional Banner Design, Visiting Card / Business Card Design, Social Media Post Design, WhatsApp DP Design, and Advertisement Creatives — all at affordable prices.</div>
+                        </div>
+                        <div class="faq-item" data-cat="design">
+                            <div class="faq-question"><span>Q. How many revisions are included?</span><i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                            <div class="faq-answer">Standard packages include 2 free revisions. Additional revisions are available at a small charge. We share a draft first before finalising any design.</div>
+                        </div>
+                        <div class="faq-item" data-cat="design">
+                            <div class="faq-question"><span>Q. In what formats will I receive my design files?</span><i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                            <div class="faq-answer">You receive PNG (transparent background), JPG (high resolution), and PDF. Editable source files (PSD, AI, CDR) can be provided for an additional charge.</div>
+                        </div>
+                        <div class="faq-item" data-cat="design">
+                            <div class="faq-question"><span>Q. How long does logo or banner design take?</span><i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                            <div class="faq-answer">Logo design: 1&ndash;3 working days. Banners and visiting card designs: usually within 24 hours. Same-day delivery is available for urgent requests (small fee may apply).</div>
+                        </div>
+                        <div class="faq-item" data-cat="design">
+                            <div class="faq-question"><span>Q. Can you design Instagram and Facebook social media posts?</span><i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                            <div class="faq-answer">Yes! We design eye-catching posts, stories, and promotional banners for Instagram, Facebook, WhatsApp, and LinkedIn — perfectly sized for each platform.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ── DATA SERVICES ── -->
+                <div class="faq-category-section" data-category="data" id="sec-data">
+                    <div class="faq-cat-heading">
+                        <i data-lucide="table" class="cat-orange"></i> Data &amp; Document Services
+                    </div>
+                    <div class="faq-accordion">
+                        <div class="faq-item" data-cat="data">
+                            <div class="faq-question"><span>Q. What data entry services do you provide?</span><i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                            <div class="faq-answer">We provide Excel &amp; Google Sheets Data Entry, Copy-Paste Tasks, PDF to Excel/Word Conversion, Data Cleaning, Data Formatting, and Deduplication services.</div>
+                        </div>
+                        <div class="faq-item" data-cat="data">
+                            <div class="faq-question"><span>Q. Can you clean and format my existing Excel data?</span><i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                            <div class="faq-answer">Absolutely! We specialise in data cleaning — removing duplicates, fixing errors, standardising formats, adding formulas, conditional formatting, and creating clean, ready-to-use spreadsheets.</div>
+                        </div>
+                        <div class="faq-item" data-cat="data">
+                            <div class="faq-question"><span>Q. Do you convert PDF to Word or Excel?</span><i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                            <div class="faq-answer">Yes. We convert PDFs to editable Word documents or Excel spreadsheets with full accuracy — preserving tables, fonts, and the original layout wherever possible.</div>
+                        </div>
+                        <div class="faq-item" data-cat="data">
+                            <div class="faq-question"><span>Q. Can you help with resume or document formatting?</span><i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                            <div class="faq-answer">Yes! We create ATS-optimised professional resumes and beautifully formatted documents with proper fonts, margins, tables, and layout — starting from just &#8377;99.</div>
+                        </div>
+                        <div class="faq-item" data-cat="data">
+                            <div class="faq-question"><span>Q. Is my data kept confidential?</span><i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                            <div class="faq-answer">Yes. All files and information you share are kept strictly confidential. We never share your data with third parties. We can sign an NDA (Non-Disclosure Agreement) if required.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ── PROCESS & DELIVERY ── -->
+                <div class="faq-category-section" data-category="process" id="sec-process">
+                    <div class="faq-cat-heading">
+                        <i data-lucide="git-branch" class="cat-purple"></i> Process &amp; Delivery
+                    </div>
+                    <div class="faq-accordion">
+                        <div class="faq-item" data-cat="process">
+                            <div class="faq-question"><span>Q. How does the order process work?</span><i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                            <div class="faq-answer">(1) Send your requirement on WhatsApp &rarr; (2) We send a price quote &rarr; (3) You confirm and pay &rarr; (4) We complete and deliver the work. Simple 4-step process!</div>
+                        </div>
+                        <div class="faq-item" data-cat="process">
+                            <div class="faq-question"><span>Q. Do you offer urgent or same-day delivery?</span><i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                            <div class="faq-answer">Yes, for most quick services. Type "URGENT" in your WhatsApp message and we'll prioritise your order. A small urgency fee may apply depending on the service.</div>
+                        </div>
+                        <div class="faq-item" data-cat="process">
+                            <div class="faq-question"><span>Q. How will my completed work be delivered?</span><i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                            <div class="faq-answer">All completed work is delivered via WhatsApp or Email. Large files are shared via secure links (Google Drive / WeTransfer). Website credentials and access details are sent on WhatsApp.</div>
+                        </div>
+                        <div class="faq-item" data-cat="process">
+                            <div class="faq-question"><span>Q. What if I am not happy with the result?</span><i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                            <div class="faq-answer">We always share a preview/draft before final delivery. If not satisfied, we offer free revisions within the agreed scope. Client satisfaction is our top priority — we work until you're happy.</div>
+                        </div>
+                        <div class="faq-item" data-cat="process">
+                            <div class="faq-question"><span>Q. Do you provide after-delivery support?</span><i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                            <div class="faq-answer">Yes. We provide 7-day post-delivery support for all services. For websites, we offer ongoing maintenance packages at affordable rates.</div>
+                        </div>
+                        <div class="faq-item" data-cat="process">
+                            <div class="faq-question"><span>Q. Can I track my order progress?</span><i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                            <div class="faq-answer">Yes. We send regular WhatsApp updates as your work progresses. For larger projects like websites, we share milestone updates so you're always in the loop.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA BOX -->
+                <div class="faq-cta-box">
+                    <h2>Still Have Questions? &#128587;</h2>
+                    <p>Our team is on WhatsApp right now. Send your question and get a clear answer — usually within minutes!</p>
+                    <div class="faq-cta-btns">
+                        <a href="https://wa.me/919137822376?text=Hello%20KY%20Tech%2C%20I%20have%20a%20question%3A%20" target="_blank" rel="noopener" class="btn btn-whatsapp" style="padding:0.95rem 2rem;font-size:1rem;">
+                            <i data-lucide="message-circle" style="width:20px;height:20px;"></i> Ask on WhatsApp
+                        </a>
+                        <a href="contact.html" class="btn" style="padding:0.95rem 2rem;font-size:1rem;background:rgba(255,255,255,0.15);color:#fff;border:1px solid rgba(255,255,255,0.4);">
+                            <i data-lucide="mail" style="width:18px;height:18px;"></i> Email Us
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="logo-link">
+                    <img src="logo-icon.webp" alt="KY Tech Logo" class="logo-img-icon" width="35" height="35" style="height:35px;width:auto;object-fit:contain;" loading="lazy">
+                    <span style="font-family:var(--font-heading);font-weight:800;font-size:1.15rem;color:var(--text-primary);">KY TECH SERVICES</span>
+                </a>
+                <p class="footer-desc">Fast &bull; Reliable &bull; Transparent Digital Services for individuals, professionals, and growing businesses across India.</p>
+                <div class="footer-socials">
+                    <a href="https://wa.me/919137822376" target="_blank" rel="noopener" class="btn-circle" aria-label="WhatsApp"><i data-lucide="message-circle" style="width:18px;height:18px;"></i></a>
+                    <a href="mailto:help@kytechserv.com" class="btn-circle" aria-label="Email"><i data-lucide="mail" style="width:18px;height:18px;"></i></a>
+                    <a href="https://kytechserv.com" target="_blank" rel="noopener" class="btn-circle" aria-label="Website"><i data-lucide="globe" style="width:18px;height:18px;"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <div class="footer-col-title">Quick Links</div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="services.html">Services</a>
+                    <a href="achievements.html">Our Achievements</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <div class="footer-col-title">Services</div>
+                <div class="footer-links">
+                    <a href="services.html">Website Development</a>
+                    <a href="services.html">E-Commerce Websites</a>
+                    <a href="services.html">Graphic Design</a>
+                    <a href="services.html">Data Entry &amp; Cleaning</a>
+                    <a href="services.html">Resume Creation</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <div class="footer-col-title">Contact</div>
+                <div class="footer-links" style="gap:1rem;">
+                    <a href="https://wa.me/919137822376" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:0.5rem;color:#25D366;font-weight:600;"><i data-lucide="message-circle" style="width:18px;height:18px;"></i> +91 91378 22376</a>
+                    <a href="mailto:help@kytechserv.com" style="display:flex;align-items:center;gap:0.5rem;"><i data-lucide="mail" style="width:18px;height:18px;"></i> help@kytechserv.com</a>
+                    <a href="https://kytechserv.com" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:0.5rem;"><i data-lucide="globe" style="width:18px;height:18px;"></i> kytechserv.com</a>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 KY Tech Services. All Rights Reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#" id="privacy-link">Privacy Policy</a>
+                <a href="#" id="terms-link">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js" defer></script>
+
+    <!-- FAQ: Search + Category Filter Logic -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const searchEl  = document.getElementById('faq-search');
+        const allItems  = document.querySelectorAll('.faq-item');
+        const allSecs   = document.querySelectorAll('.faq-category-section');
+        const noResults = document.getElementById('faq-no-results');
+        const tabBtns   = document.querySelectorAll('.faq-tab-btn');
+
+        // Category filter
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                tabBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                searchEl.value = '';
+                const cat = btn.dataset.cat;
+                allSecs.forEach(sec => {
+                    sec.style.display = (cat === 'all' || sec.dataset.category === cat) ? '' : 'none';
+                });
+                allItems.forEach(item => item.classList.remove('faq-hidden'));
+                noResults.style.display = 'none';
+            });
+        });
+
+        // Live search
+        searchEl.addEventListener('input', function () {
+            const q = this.value.trim().toLowerCase();
+            // Show all categories when searching
+            tabBtns.forEach(b => b.classList.remove('active'));
+            document.getElementById('tab-all').classList.add('active');
+            allSecs.forEach(sec => sec.style.display = '');
+
+            let visible = 0;
+            allItems.forEach(item => {
+                if (!q || item.textContent.toLowerCase().includes(q)) {
+                    item.classList.remove('faq-hidden');
+                    visible++;
+                } else {
+                    item.classList.add('faq-hidden');
+                }
+            });
+            // Hide empty category sections
+            allSecs.forEach(sec => {
+                const hasVisible = [...sec.querySelectorAll('.faq-item')].some(i => !i.classList.contains('faq-hidden'));
+                sec.style.display = hasVisible ? '' : 'none';
+            });
+            noResults.style.display = visible === 0 ? 'block' : 'none';
+        });
+    });
+    </script>
+</body>
+</html>
